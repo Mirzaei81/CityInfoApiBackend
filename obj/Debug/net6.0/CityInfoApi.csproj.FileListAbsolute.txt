@@ -1,0 +1,362 @@
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.AssemblyReference.cache
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfoInputs.cache
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfo.cs
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CoreCompileInputs.cache
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\appsettings.json
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\CityInfoApi.exe
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\CityInfoApi.deps.json
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\CityInfoApi.runtimeconfig.json
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\CityInfoApi.pdb
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Humanizer.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.Data.Sqlite.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\SQLitePCLRaw.core.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\scopedcss\bundle\CityInfoApi.styles.css
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CopyComplete
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\refint\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.pdb
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\CityInfoApi.genruntimeconfig.cache
+C:\Users\amir\Asp.netProject\CityInfoApi\CityInfoApi\obj\Debug\net6.0\ref\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.AssemblyReference.cache
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfoInputs.cache
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfo.cs
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CoreCompileInputs.cache
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\refint\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.pdb
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\appsettings.json
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\CityInfoApi.exe
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\CityInfoApi.deps.json
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\CityInfoApi.runtimeconfig.json
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\CityInfoApi.pdb
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Humanizer.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\scopedcss\bundle\CityInfoApi.styles.css
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CopyComplete
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\CityInfoApi.genruntimeconfig.cache
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\obj\Debug\net6.0\ref\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\amir\Asp.netProject\CityInfoApi - Copy\CityInfoApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\appsettings.json
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.exe
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.deps.json
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.runtimeconfig.json
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.pdb
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Humanizer.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.AssemblyReference.cache
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfoInputs.cache
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfo.cs
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CoreCompileInputs.cache
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\scopedcss\bundle\CityInfoApi.styles.css
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CopyComplete
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\refint\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.pdb
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.genruntimeconfig.cache
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\ref\CityInfoApi.dll
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.Properties.Resources.resources
+C:\Users\amir\Asp.netProject\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.GenerateResource.cache
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\appsettings.Development.json
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\appsettings.json
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.exe
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.deps.json
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.runtimeconfig.json
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\ref\CityInfoApi.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.pdb
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Humanizer.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Drawing.Common.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Security.Permissions.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.AssemblyReference.cache
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.Properties.Resources.resources
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.GenerateResource.cache
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfoInputs.cache
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfo.cs
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CoreCompileInputs.cache
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cs
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cache
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets.build.json
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets.development.json
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\scopedcss\bundle\CityInfoApi.styles.css
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CopyComplete
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\ref\CityInfoApi.dll
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.pdb
+E:\visitor and\Visitor\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.genruntimeconfig.cache
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\appsettings.json
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.exe
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.deps.json
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.runtimeconfig.json
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\CityInfoApi.pdb
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.AssemblyReference.cache
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.Properties.Resources.resources
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.GenerateResource.cache
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfoInputs.cache
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.AssemblyInfo.cs
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.csproj.CoreCompileInputs.cache
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets\msbuild.CityInfoApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets\msbuild.build.CityInfoApi.props
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CityInfoApi.props
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CityInfoApi.props
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\scopedcss\bundle\CityInfoApi.styles.css
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfo.80CFEE6D.Up2Date
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\refint\CityInfoApi.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.pdb
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\CityInfoApi.genruntimeconfig.cache
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net6.0\ref\CityInfoApi.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\Faker.Net.6.0.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\bin\Debug\net6.0\de-DE\Faker.Net.6.0.resources.dll
