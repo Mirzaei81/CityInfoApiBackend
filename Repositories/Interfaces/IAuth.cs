@@ -11,7 +11,7 @@ namespace CityInfoApi.Repositories.Interfaces
     public interface IAuth
     {
         public Task<UserResault?> GetUserAsync(string user,string password);
-        public Task<string?> GetConfigDBAsync(float year, string daftar, string company);
+        public Task<ConfigDto?> GetConfigDBAsync(float year, string daftar, string company);
         Task<string[]?> GetAllUserAsync();
     }
 }

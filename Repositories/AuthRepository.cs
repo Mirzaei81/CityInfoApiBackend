@@ -19,15 +19,15 @@ namespace CityInfoApi.Repositories
             _context = ctx; 
         }
 
-        public async Task<string?> GetConfigDBAsync(float yearId, string daftarName, string companyName)
+        public async Task<ConfigDto?> GetConfigDBAsync(float yearId, string daftarName, string companyName)
         {
-            string? sysYear =await  (from year in _context.Set<SysYear>()
+            ConfigDto? sysYear =await  (from year in _context.Set<SysYear>()
                                join daftar in _context.Set<SysDaftar>()
                                    on year.YDaftar equals daftar.DId
                                join company in _context.Set<SysCompany>()
                                    on year.YCompany equals company.CId
                                 where year.YYear == yearId && daftar.DName == daftarName && company.CName == companyName
-                               select year.YDbname).FirstOrDefaultAsync();
+                               select new ConfigDto ( year.YDbname!,year.YDateE!,year.YDateF! )).FirstOrDefaultAsync();
             return sysYear;
         }
 

@@ -1,4 +1,5 @@
-﻿using CityInfoApi.Models;
+﻿using CityInfoApi.Dtos;
+using CityInfoApi.Models;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -10,7 +11,7 @@ namespace CityInfoApi.Repositories
 {
     public class CityInfoRepository : iCityInfoReposit
     {
-        private readonly AlmasACC  _dbcontex;
+        private readonly AlmasACC _dbcontex;
         public CityInfoRepository(AlmasACC dbcontex)
         {
             _dbcontex = dbcontex;
@@ -40,25 +41,20 @@ namespace CityInfoApi.Repositories
                                                            .ToListAsync();
         }
 
-
-       
         public async Task<IEnumerable<HsbPrsnsKoli>> GetHsbPrsnsKoliAsync(string dateTo, string dateFrom, int codeM, int mrkaz, int mandDate, char kind)
         {
-            var queryResult = await _dbcontex.HsbPrsnsKolis.FromSqlInterpolated($@"
-           EXEC acc_HsbPrsnsKoli {dateTo}, {dateFrom}, {codeM}, {mrkaz}, {mandDate}, {kind}").ToListAsync();
-
-    
+            var queryResult = await _dbcontex.HsbPrsnsKolis.FromSqlInterpolated($@"EXEC acc_HsbPrsnsKoli {dateTo}, {dateFrom}, {codeM}, {mrkaz}, {mandDate}, {kind}").ToListAsync();
             return queryResult;
         }
 
-       /* public async Task<IEnumerable<str_Ins2Factor>> Getstr_Ins2FactorAsync(string dateTo, string dateFrom, int codeM, int mrkaz, int mandDate, char kind)
-        {
-            var queryResult = await _dbcontex.str_Ins2Factor.FromSqlInterpolated($@"
-           EXEC str_Ins2Factor {dateTo}, {dateFrom}, {codeM}, {mrkaz}, {mandDate}, {kind}").ToListAsync();
+        /* public async Task<IEnumerable<str_Ins2Factor>> Getstr_Ins2FactorAsync(string dateTo, string dateFrom, int codeM, int mrkaz, int mandDate, char kind)
+         {
+             var queryResult = await _dbcontex.str_Ins2Factor.FromSqlInterpolated($@"
+            EXEC str_Ins2Factor {dateTo}, {dateFrom}, {codeM}, {mrkaz}, {mandDate}, {kind}").ToListAsync();
 
-            return queryResult;
-        }*/
-    
+             return queryResult;
+         }*/
+
 
         /*        public async Task<IEnumerable<output>> Getoutput(Input input)
                 {
@@ -84,8 +80,6 @@ namespace CityInfoApi.Repositories
             return queryResult;
         }
 
-
-
         public async Task<IEnumerable<Ins2Factor>> GetQueryResult(int F_No,
                         string F_Date, int F_Markz,
                         int F_User,
@@ -107,27 +101,27 @@ namespace CityInfoApi.Repositories
                         float F_Maliat, float F_Avarez,
                         string F_DriverName)
 
-             /* public async Task<IEnumerable<Ins2Factor>> GetQueryResult(int F_No,
-                        string F_Date, int F_Markz,
-                        int F_User,
-                        short F_Kind,
-                        short F_Anbar,
-                        int F_Moshtari,
-                        float F_Mab,
-                        float F_MabKol)*/
+        /* public async Task<IEnumerable<Ins2Factor>> GetQueryResult(int F_No,
+                   string F_Date, int F_Markz,
+                   int F_User,
+                   short F_Kind,
+                   short F_Anbar,
+                   int F_Moshtari,
+                   float F_Mab,
+                   float F_MabKol)*/
         {
-/*
-            var queryResult = await _dbcontex.Ins2factor.FromSqlInterpolated($@"
-                 exec str_Ins2Factor 
-                 {F_No},
-                 {F_Date},
-                 {F_Markz},
-                 {F_User},
-                 {F_Kind},
-                 {F_Anbar},
-                 {F_Moshtari},
-                 {F_Mab},
-                 {F_MabKol}").ToListAsync();*/
+            /*
+                        var queryResult = await _dbcontex.Ins2factor.FromSqlInterpolated($@"
+                             exec str_Ins2Factor 
+                             {F_No},
+                             {F_Date},
+                             {F_Markz},
+                             {F_User},
+                             {F_Kind},
+                             {F_Anbar},
+                             {F_Moshtari},
+                             {F_Mab},
+                             {F_MabKol}").ToListAsync();*/
 
             var queryResult = await _dbcontex.Ins2factor.FromSqlInterpolated($@"
                  exec str_Ins2Factor 
@@ -185,19 +179,23 @@ namespace CityInfoApi.Repositories
             return queryResult;
         }
 
-      
+        public async Task<IEnumerable<categoryDTO?>> GetCategoriesAsync()
+        {
+            return await _dbcontex.GorohKs.Select(g => new categoryDTO(g.GkCode, g.GkName!)).ToArrayAsync();
+        }
 
+        public async Task<IEnumerable<Kala>> GetKalaByGroupAsync(int GId)
+        {
+            return await _dbcontex.Kalas.Join(_dbcontex.GorohKs, k => k.KGoroh, g => g.GkCode, (K, G) => new { K, G }).Where((a) => a.G.GkCode == GId).Select(a => a.K).ToArrayAsync();
+        }
 
-
-
-
+        public async Task<IEnumerable<FactorDetail>> GetFactorDetailsAsync(int FK_NO)
+        {
+            return await _dbcontex.Factor1s.Join(_dbcontex.Factor2s, F1 => F1.FFactor, F2 => F2.FkFactor, (F1, F2) => new { F1, F2 })
+                .Join(_dbcontex.Kalas,a=>a.F2.FkKala,k=>k.KCode,(a,k)=> new { F1 = a.F1, F2 = a.F2, K = k })
+                .Where(F => F.F1.FNo == FK_NO).Select(a=>new FactorDetail(a.K.KCode,a.K.KName,a.F2.FkNumKoli,a.K.KZarib,a.K.KVahed,a.F2.FkNum,a.F2.FkMab,a.F2.FkMab*a.F2.FkTdad)).ToArrayAsync();
+        }
 
     }
-
-
-
-
-
-
 }
 

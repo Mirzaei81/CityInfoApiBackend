@@ -1,4 +1,5 @@
 ﻿
+using CityInfoApi.Dtos;
 using CityInfoApi.Models;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -18,17 +19,34 @@ namespace CityInfoApi.Controllers
         }
 
         [HttpGet("kalas")]
-        public async Task< ActionResult<IEnumerable<Kala>>> GetCities()
+        public async Task< ActionResult<IEnumerable<Kala>>> GetKalas()
         {
-            var cities=await _iCityInfoReposit.GetKalasAsync();
-            return Ok(new KalaListResponse { Kalas = cities });
+            return Ok(await _iCityInfoReposit.GetKalasAsync());
 
         }
-        public class KalaListResponse
-        {
-            public IEnumerable<Kala>? Kalas { get; set; }
-        }
 
+        [HttpGet("groups/{gid}")]
+        [ProducesResponseType(typeof(Kala),200)]
+        [ProducesResponseType(400)]
+        public async Task<ActionResult<IEnumerable<Kala>>> GetKalaByGroup(int gid)
+        {
+            IEnumerable<Kala> kalas = await _iCityInfoReposit.GetKalaByGroupAsync(gid);
+            if (kalas == null || kalas.Count()==0)
+            {
+                return NotFound();  
+            }
+            return Ok(kalas);
+        }
+        [HttpGet("groups")]
+        public async Task<ActionResult<IEnumerable<categoryDTO>>> GetCategories()
+        {
+            IEnumerable<categoryDTO?> groups = await _iCityInfoReposit.GetCategoriesAsync();
+            if(groups==null || groups.Count()==0)
+            {
+                return NotFound();
+            }
+            return Ok(groups);  
+        }
         [HttpGet("moshtaris")]
         public async Task<ActionResult<IEnumerable<Moshtari>>> GetCities2()
         {
@@ -68,12 +86,13 @@ namespace CityInfoApi.Controllers
         }
 
       /*  https://localhost:44355/api/acc_HsbPrsnsKoli?dateTo=1401%2F12%2F29&dateFrom=1401%2F01%2F01&codeM=10001&mrkaz=1&mandDate=0&kind=A*/
+
         [HttpGet("acc_HsbPrsnsKoli")]
-        public async Task<ActionResult<IEnumerable<HsbPrsnsKoli>>> GetSomeDataAsync(string dateTo, string dateFrom, int codeM, int mrkaz, int mandDate, char kind)
+        public async Task<ActionResult<IEnumerable<HsbPrsnsKoli>>> GetSomeDataAsync(string? dateTo, string? dateFrom, int codeM, int mrkaz, int mandDate, char kind)
         {
             var queryResult = await _iCityInfoReposit.GetHsbPrsnsKoliAsync(dateTo, dateFrom, codeM, mrkaz, mandDate, kind);
 
-            if (queryResult == null )
+            if (queryResult == null || queryResult.Count()==0 )
             {
                 return NotFound();
             }
@@ -175,6 +194,16 @@ namespace CityInfoApi.Controllers
 
 
             return Ok(queryResult);
+        }
+        [HttpGet("Fac/{FK_NO}")]
+        public async Task<ActionResult<IEnumerable<FactorDetail>>> getFactorDetail(int FK_NO)
+        {
+            IEnumerable<FactorDetail>? factor =await _iCityInfoReposit.GetFactorDetailsAsync(FK_NO);
+            if (factor == null)
+            {
+                return NotFound();
+            }
+            return Ok(factor);
         }
 
 

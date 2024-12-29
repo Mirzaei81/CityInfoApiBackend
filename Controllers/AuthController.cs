@@ -50,9 +50,9 @@ namespace CityInfoApi.Controllers
         }
 
         [HttpPost("db")]
-        public async Task<ActionResult<string>> getConfig([FromBody] serverDetailDto detail)
+        public async Task<ActionResult<ConfigDto>> getConfig([FromBody] serverDetailDto detail)
         {
-            string? dbName =await authRepo.GetConfigDBAsync(detail.year,detail.daftar,detail.company);
+            ConfigDto? dbName =await authRepo.GetConfigDBAsync(detail.year,detail.daftar,detail.company);
             if (dbName == null)
             {
                 return NotFound();

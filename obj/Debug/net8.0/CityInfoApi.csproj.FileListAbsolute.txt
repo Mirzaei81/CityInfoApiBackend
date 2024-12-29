@@ -73,3 +73,4 @@ C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net8.0\ref
 C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net8.0\CityInfoApi.pdb
 C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net8.0\CityInfoApi.genruntimeconfig.cache
 C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net8.0\ref\CityInfoApi.dll
+C:\Users\Mirza\source\repos\visitorApiAlmas1401\CityInfoApi\obj\Debug\net8.0\CityInfoApi.sourcelink.json
