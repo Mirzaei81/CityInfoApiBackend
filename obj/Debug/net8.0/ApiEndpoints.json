@@ -52,14 +52,34 @@
   },
   {
     "ContainingType": "CityInfoApi.Controllers.CitiesController",
+    "Method": "getAnbars",
+    "RelativePath": "api/Anbar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CityInfoApi.Models.Anbar, CityInfoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CityInfoApi.Controllers.CitiesController",
     "Method": "getFactorDetail",
-    "RelativePath": "api/Fac/{FK_NO}",
+    "RelativePath": "api/Fac/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "FK_NO",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -179,142 +199,6 @@
   },
   {
     "ContainingType": "CityInfoApi.Controllers.CitiesController",
-    "Method": "GetQueryResult",
-    "RelativePath": "api/Ins2Factor",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "F_No",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Date",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Markz",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_User",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Kind",
-        "Type": "System.Int16",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Anbar",
-        "Type": "System.Int16",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Moshtari",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Serial",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Anbar2",
-        "Type": "System.Int16",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_DateTahvil",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_DateA",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Mab",
-        "Type": "System.Single",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_MabKol",
-        "Type": "System.Single",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Kosor",
-        "Type": "System.Single",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Ezafat",
-        "Type": "System.Single",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Porsant",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_MabPorsant",
-        "Type": "System.Single",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_FixPorsant",
-        "Type": "System.Byte",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Kdarsad",
-        "Type": "System.Byte",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_AccAnbar",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Maliat",
-        "Type": "System.Single",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_Avarez",
-        "Type": "System.Single",
-        "IsRequired": false
-      },
-      {
-        "Name": "F_DriverName",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CityInfoApi.Models.Ins2Factor, CityInfoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CityInfoApi.Controllers.CitiesController",
     "Method": "GetKalas",
     "RelativePath": "api/kalas",
     "HttpMethod": "GET",
@@ -383,6 +267,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CityInfoApi.Controllers.CitiesController",
+    "Method": "PostFactor",
+    "RelativePath": "api/SubmitFactor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "factorDetails",
+        "Type": "FactorSubmit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CityInfoApi.Controllers.AuthController",

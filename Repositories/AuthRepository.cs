@@ -1,4 +1,5 @@
-﻿using CityInfoApi.Dtos;
+﻿using CityInfoApi.AlmasMain;
+using CityInfoApi.Dtos;
 using CityInfoApi.Models;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -21,32 +22,34 @@ namespace CityInfoApi.Repositories
 
         public async Task<ConfigDto?> GetConfigDBAsync(float yearId, string daftarName, string companyName)
         {
-            ConfigDto? sysYear =await  (from year in _context.Set<SysYear>()
+            ConfigDto? configResult =await  (from year in _context.Set<SysYear>()
                                join daftar in _context.Set<SysDaftar>()
                                    on year.YDaftar equals daftar.DId
                                join company in _context.Set<SysCompany>()
                                    on year.YCompany equals company.CId
                                 where year.YYear == yearId && daftar.DName == daftarName && company.CName == companyName
                                select new ConfigDto ( year.YDbname!,year.YDateE!,year.YDateF! )).FirstOrDefaultAsync();
-            return sysYear;
+            return configResult;
         }
 
         public async Task<UserResault?> GetUserAsync(string username,string password)
         {
-            User user = await _context.Users.FirstOrDefaultAsync(u => u.UName == username);
-
+            User? user = await _context.Users.FirstOrDefaultAsync(u => u.UName == username);
             if (user != null) {
                 if (Equals(Encrypt(password),user.URamz))
                 {
-                    IQueryable<ServerDetail> serverDetail = from year in _context.Set<SysYear>()
+                    IEnumerable<ServerDetail> serverDetail = await (from year in _context.Set<SysYear>()
                                                   join daftar in _context.Set<SysDaftar>()
                                                       on year.YDaftar equals daftar.DId
                                                   join company in _context.Set<SysCompany>()
                                                       on year.YCompany equals company.CId
-                                                  select new ServerDetail(daftar.DName, year.YYear, company.CName,year.YDbname);
-                    UserResault userDetail = new(user, await serverDetail.ToArrayAsync());
+                                                  select new ServerDetail(daftar.DName!, year.YYear, company.CName!,year.YDbname!)).ToArrayAsync();
+                    UserResault userDetail = new(user, serverDetail);
+                    IEnumerable<Markaz> markazes = await  _context.Markazs.ToListAsync();
+                    userDetail.markazes= markazes;
                     return userDetail;
                 }
+
                 return null;
             }
             return null;

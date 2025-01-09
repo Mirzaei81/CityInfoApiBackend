@@ -64,7 +64,7 @@ namespace CityInfoApi.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                string DbName = _httpContext.Request.Cookies["Configuration"];
+                string? DbName = _httpContext.Request.Cookies["Configuration"];
                 if (DbName != null)
                 {
                     string Connection = String.Format("data source=DESKTOP-LAM4N1K\\SQLEXPRESS;Database={0};Trusted_Connection=true", DbName);

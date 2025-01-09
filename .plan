@@ -2,4 +2,8 @@
 ____
 * Dynamicly Change DbContext on User Auth 
 * Genrate Token on Register Selecting Currect Dafater and year
+--
+ fix config so have submit Factor Detail return result on kala maybe eg get markz 
+ on login return markaze
+ -------------
 

@@ -2,13 +2,14 @@ using CityInfoApi.Models;
 using CityInfoApi.Repositories;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-
+using Swashbuckle.AspNetCore.SwaggerGen;
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers()
      .AddJsonOptions(options =>
      {
          options.JsonSerializerOptions.PropertyNamingPolicy = null;
+         options.JsonSerializerOptions.IncludeFields = true;
          options.JsonSerializerOptions.WriteIndented = true;
      });
 

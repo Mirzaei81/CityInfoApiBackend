@@ -1,12 +1,15 @@
-﻿using CityInfoApi.Models;
+﻿using CityInfoApi.AlmasMain;
+using CityInfoApi.Models;
 
 namespace CityInfoApi.Dtos
 {
     public class UserResault
     {
         public User user { get; set; }
-        public ServerDetail[] serverDetail { get; set; }
-        public UserResault(User matchedUser, ServerDetail[] detail )
+
+        public IEnumerable<Markaz> markazes { get; set; }
+        public IEnumerable<ServerDetail> serverDetail { get; set; }
+        public UserResault(User matchedUser, IEnumerable<ServerDetail> detail)
         {
             user = matchedUser;
             serverDetail = detail;

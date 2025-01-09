@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CityInfoApi.AlmasMain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -20,11 +21,25 @@ namespace CityInfoApi.Models
         public virtual DbSet<SysDaftar> SysDaftars { get; set; } = null!;
         public virtual DbSet<SysYear> SysYears { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<Markaz> Markazs { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.UseCollation("Arabic_CI_AI");
+            modelBuilder.Entity<Markaz>(entity =>
+            {
+                entity.HasKey(e => e.ZCode);
 
+                entity.ToTable("Markaz");
+
+                entity.Property(e => e.ZCode).HasColumnName("Z_Code");
+
+                entity.Property(e => e.ZFlag).HasColumnName("Z_Flag");
+
+                entity.Property(e => e.ZName)
+                    .HasMaxLength(20)
+                    .HasColumnName("Z_Name");
+            });
             modelBuilder.Entity<SysCompany>(entity =>
             {
                 entity.HasKey(e => e.CId);

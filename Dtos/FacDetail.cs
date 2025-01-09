@@ -1,26 +1,42 @@
+using System.Text.Json.Serialization;
 namespace CityInfoApi.Dtos
 {
-    public class FactorDetail
+    public partial class FactorDetail
     {
-        public int K_Code { get; set; }
-        public string K_Name { get; set; }
-
-        public int? FK_koli { get; set; }
-        public double? K_zarib { get; set; }
-        public string K_Vahed { get; set; }
-        public double? FK_Num { get; set; }
-        public double? FK_Mab { get; set; }
-        public double? FK_Mab_koli { get; set; }
-        public FactorDetail(int Code ,string Name,int? koli,double? zarib,string Vahed,double? FNum,double? FMab,double? Fkoli)
+        public FactorDetail(int kCode, string kName, int? fkNumkoli, double? kZarib, string kVahed, double? fkNum, double? fkMab, double? fkMabKoli)
         {
-            K_Code = Code;
-            K_Name = Name;
-            FK_koli = koli;
-            K_zarib=zarib;
-            K_Vahed = Vahed;
-            FK_Num = FNum;
-            FK_Mab = FMab;
-            FK_Mab_koli = Fkoli;
+            KCode = kCode;
+            KName = kName;
+            FkNumkoli = fkNumkoli;
+            KZarib = kZarib;
+            KVahed = kVahed;
+            FkNum = fkNum;
+            FkMab = fkMab;
+            FkMabKoli = fkMabKoli;
         }
-    }
+
+        [JsonPropertyName("K_Code")]
+        public int KCode { get; set; }
+
+        [JsonPropertyName("K_Name")]
+        public string KName { get; set; }
+
+        [JsonPropertyName("FK_Numkoli")]
+        public int? FkNumkoli { get; set; }
+
+        [JsonPropertyName("K_zarib")]
+        public double? KZarib { get; set; }
+
+        [JsonPropertyName("K_Vahed")]
+        public string KVahed { get; set; }
+
+        [JsonPropertyName("FK_Num")]
+        public double? FkNum { get; set; }
+
+        [JsonPropertyName("FK_Mab")]
+        public double? FkMab { get; set; }
+
+        [JsonPropertyName("FK_Mab_koli")]
+        public double? FkMabKoli { get; set; }
+    };
 }

@@ -34,7 +34,6 @@ namespace CityInfoApi.Models
         public string? AAcc24 { get; set; }
         public string? AAcc7 { get; set; }
         public string? AAcc16 { get; set; }
-
         public virtual Onvan? AAcc10Navigation { get; set; }
         public virtual Onvan? AAcc11Navigation { get; set; }
         public virtual Onvan? AAcc12Navigation { get; set; }
