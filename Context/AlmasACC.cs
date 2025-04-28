@@ -77,11 +77,12 @@ namespace CityInfoApi.Models
                 }
             }
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.UseCollation("SQL_Latin1_General_CP1256_CI_AS");
 
-            modelBuilder.Entity<Sanad1400>().HasNoKey();
+        [DbFunction("dbo.GetMojodi")]
+        public static float GetMojodi(int Kala,int Anbar ,string ToDate)
+        { throw new NotImplementedException();}
+        protected override void OnModelCreating(ModelBuilder modelBuilder) 
+        { 
             modelBuilder.Entity<HsbPrsnsKoli>().HasNoKey();
 
             modelBuilder.Entity<Ins2Factor>().HasNoKey();
@@ -578,7 +579,6 @@ namespace CityInfoApi.Models
                 entity.HasIndex(e => e.FAnbar, "IX_Factor1_2");
 
                 entity.HasIndex(e => e.FNo, "IX_Factor1_3");
-
                 entity.Property(e => e.FFactor)
                     .ValueGeneratedNever()
                     .HasColumnName("F_Factor");
@@ -2981,7 +2981,6 @@ namespace CityInfoApi.Models
                 OnModelCreatingPartial(modelBuilder);
             });
         }
-
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

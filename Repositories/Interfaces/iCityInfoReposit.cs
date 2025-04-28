@@ -22,5 +22,7 @@ namespace CityInfoApi.Repositories.Interfaces
         Task<IEnumerable<Sanad1400>> Getacc_SelectSanadsAsync(int code, string date1);
         Task<IEnumerable<Anbar>> GetAnbarsAsync();
         Task<int> SubmitFactorAsync(FactorSubmit factorDetail);
+        Task<Moshtari> CreateMoshtariAsync(MoshtariDto moshtariDto);
+        Task<IEnumerable<GorohM>> GetGorohMsAsync();
     }
 }

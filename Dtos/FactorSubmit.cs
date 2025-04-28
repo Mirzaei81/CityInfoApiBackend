@@ -16,6 +16,9 @@ public partial class FactorSubmit
     [JsonPropertyName("MoshtaryId")]
     public long MoshtaryId { get; set; }
 
+    [JsonPropertyName("Sharh")]
+    public String Sharh { get; set; }
+
     [JsonPropertyName("factorDetails")]
     public List<FactorDetail> FactorDetails { get; set; }
 }

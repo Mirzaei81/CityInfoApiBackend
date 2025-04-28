@@ -3,6 +3,7 @@ using CityInfoApi.Models;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using System.Text.Json;
 
 namespace CityInfoApi.Controllers
 {
@@ -48,16 +49,32 @@ namespace CityInfoApi.Controllers
             return Ok(groups);  
         }
         [HttpGet("moshtaris")]
-        public async Task<ActionResult<IEnumerable<Moshtari>>> GetCities2()
+        public async Task<ActionResult<MoshtariListResponse>> GetCities2()
         {
             var cities = await _iCityInfoReposit.GetMoshtarisAsync();
+            var  gorohs = await _iCityInfoReposit.GetGorohMsAsync();
+            var moshtariListResponse = new MoshtariListResponse { Moshtaris = cities, gorohMs = gorohs };
+            try
+            {
+                string body = JsonSerializer.Serialize(moshtariListResponse);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return Ok(moshtariListResponse);
+        }
 
-
-            return Ok(new MoshtariListResponse { Moshtaris = cities });
+        [HttpPost("moshtaris")]
+        public async Task<ActionResult<IEnumerable<Moshtari>>> CreateMoshtari([FromBody] MoshtariDto moshtariDto)
+        {
+            var cities = await _iCityInfoReposit.CreateMoshtariAsync(moshtariDto);
+            return Ok(cities);
         }
         public class MoshtariListResponse
         {
             public IEnumerable<Moshtari>? Moshtaris { get; set; }
+            public IEnumerable<GorohM> gorohMs { get; set; }
         }
 
 
@@ -111,7 +128,7 @@ namespace CityInfoApi.Controllers
             try
             {
                 int F_No =await  _iCityInfoReposit.SubmitFactorAsync(factorDetails);
-                string FacUri = $"/Fac/{F_No}";
+                string FacUri = $"api/Fac/{F_No}";
                 return  Created(FacUri,new {Uri=FacUri, id = F_No });
             }catch(SqlException exception)
             {
@@ -157,9 +174,5 @@ namespace CityInfoApi.Controllers
 
 
     }
-
-
-
-
 }
 

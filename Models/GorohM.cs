@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CityInfoApi.Models
 {
@@ -16,6 +17,7 @@ namespace CityInfoApi.Models
         public bool? GmInForosh { get; set; }
         public bool? GmInPosnt { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Moshtari> Moshtaris { get; set; }
     }
 }

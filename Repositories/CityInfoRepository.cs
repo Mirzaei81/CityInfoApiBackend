@@ -3,6 +3,8 @@ using CityInfoApi.Models;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
+using System.Collections.Immutable;
 using System.Data;
 using System.Data.Common;
 using System.Globalization;
@@ -69,9 +71,9 @@ namespace CityInfoApi.Repositories
             return await _dbcontex.GorohKs.Select(g => new categoryDTO(g.GkCode, g.GkName!)).ToArrayAsync();
         }
 
-        public async Task<IEnumerable<Kala>> GetKalaByGroupAsync(int GId)
+        public async Task<IEnumerable<Kala>> GetKalaByGroupAsync(int GId, int anbar, string ToDate)
         {
-            return await _dbcontex.Kalas.Join(_dbcontex.GorohKs, k => k.KGoroh, g => g.GkCode, (K, G) => new { K, G }).Where((a) => a.G.GkCode == GId).Select(a => a.K).ToArrayAsync();
+            return await _dbcontex.Kalas.Where(k => k.KGoroh == GId).ToArrayAsync();
         }
         public async Task<IEnumerable<Anbar>> GetAnbarsAsync()
         {
@@ -87,6 +89,7 @@ namespace CityInfoApi.Repositories
         private async Task<int> genrateF_NO(long loginId,string tmpName,int count,string today)
         {
             int F_No = await _dbcontex.Factor1s.OrderByDescending(F=>-1*F.FNo).Select(F => F.FNo).LastOrDefaultAsync();
+
             string dbName = tmpName;
             if (F_No == default)
             {
@@ -106,10 +109,6 @@ namespace CityInfoApi.Repositories
                 await genrateF_NO(loginId,tmpName,count + 1,today);
             }
             return F_No;
-        }
-        private static float Money2Float(string money)
-        {
-            return float.Parse(money);
         }
         private async void ExitFromReserv(string Chr, int no)
         {
@@ -194,7 +193,7 @@ namespace CityInfoApi.Repositories
                     cmdInsITM.Parameters.AddWithValue("@F_Factor", mFactor);
                     cmdInsITM.Parameters.AddWithValue("@Radif", cnt);
                     cmdInsITM.Parameters.AddWithValue("@Kala", row.KCode);
-                    cmdInsITM.Parameters.AddWithValue("@Sharh", "");
+                    cmdInsITM.Parameters.AddWithValue("@Sharh", cnt == 0 ? factorSubmition.Sharh :""); 
                     cmdInsITM.Parameters.AddWithValue("@Num", row.FkNum);
                     cmdInsITM.Parameters.AddWithValue("@NumKoli", row.FkNumkoli);
                     cmdInsITM.Parameters.AddWithValue("@Tol", 0);
@@ -220,6 +219,40 @@ namespace CityInfoApi.Repositories
             connection = null;
             ExitFromReserv("F20", F_Factor);
             return F_Factor;
+        }
+        public async Task<Moshtari> CreateMoshtariAsync(MoshtariDto moshtariDto)
+        {
+            var moshtari = new Moshtari
+            {
+                MGoroh = moshtariDto.MGoroh,
+                MName = moshtariDto.MName,
+                MAcc = "",
+                MKol = "",
+                MMoein = "",
+                MTfzili = "",
+                MModir = false,
+                MAtbar = moshtariDto.MAtbar,
+                MMobil = moshtariDto.MMobil,
+                MAddress = moshtariDto.MAddress,
+                MMeli = moshtariDto.MMeli,
+                MHmkar = moshtariDto.MHmkar,
+                MPost = moshtariDto.MPost,
+                MCity = moshtariDto.MCity,
+                MOstan = moshtariDto.MOstan
+            };
+
+            _dbcontex.Moshtaris.Add(moshtari);
+            await _dbcontex.SaveChangesAsync();
+            return moshtari;
+        }
+        public async Task<IEnumerable<Kala>> GetKalaByGroupAsync(int GId)
+        {
+            return await  _dbcontex.Kalas.Where(k => k.KGoroh == GId).ToListAsync();
+        }
+
+        public async Task<IEnumerable<GorohM>> GetGorohMsAsync()
+        {
+            return await  _dbcontex.GorohMs.ToListAsync();
         }
     }
 }

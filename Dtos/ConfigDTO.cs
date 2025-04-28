@@ -1,4 +1,5 @@
 using CityInfoApi.AlmasMain;
+using CityInfoApi.Models;
 
 public class ConfigDto
 {

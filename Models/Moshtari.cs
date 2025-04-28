@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CityInfoApi.Models
 {
@@ -48,13 +49,19 @@ namespace CityInfoApi.Models
         public bool? MTelSms { get; set; }
         public string? MSabt { get; set; }
         public bool MModir { get; set; }
-
+        [JsonIgnore]
         public virtual Onvan MAccNavigation { get; set; } = null!;
+        [JsonIgnore]
         public virtual GorohM MGorohNavigation { get; set; } = null!;
+        [JsonIgnore]
         public virtual MoshtariTkmili MoshtariTkmili { get; set; } = null!;
+        [JsonIgnore]
         public virtual ICollection<Factor1> Factor1FMoshtariNavigations { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Factor1> Factor1FPorsantNavigations { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Khadamat> Khadamats { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Payment1> Payment1s { get; set; }
     }
 }

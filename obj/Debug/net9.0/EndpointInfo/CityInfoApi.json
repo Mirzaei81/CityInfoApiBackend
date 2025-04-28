@@ -1,0 +1,3485 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CityInfoApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/Auth/users": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/db": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/serverDetailDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/serverDetailDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/serverDetailDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Auth": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPasswordDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPasswordDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPasswordDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResault"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResault"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResault"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/kalas": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kala"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kala"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kala"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/groups/{gid}": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "parameters": [
+          {
+            "name": "gid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kala"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kala"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kala"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/groups": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/categoryDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/categoryDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/categoryDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/moshtaris": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoshtariListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoshtariListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoshtariListResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cities"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoshtariDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoshtariDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoshtariDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Moshtari"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Moshtari"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Moshtari"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/factor1": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Factor1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Factor1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Factor1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/fmoshtari/{id}": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Factor1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Factor1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Factor1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/acc_HsbPrsnsKoli": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "parameters": [
+          {
+            "name": "dateTo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codeM",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "mrkaz",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "mandDate",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HsbPrsnsKoli"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HsbPrsnsKoli"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HsbPrsnsKoli"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SubmitFactor": {
+      "post": {
+        "tags": [
+          "Cities"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FactorSubmit"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FactorSubmit"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FactorSubmit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Anbar": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Anbar"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Anbar"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Anbar"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Fac/{id}": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FactorDetail"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FactorDetail"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FactorDetail"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sanad": {
+      "get": {
+        "tags": [
+          "Cities"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "date1",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sanad1400"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sanad1400"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sanad1400"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Anbar": {
+        "type": "object",
+        "properties": {
+          "ACode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "AName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ANameA": {
+            "type": "string",
+            "nullable": true
+          },
+          "AFlag": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "AAcc1": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc2": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc3": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc4": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc5": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc6": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc9": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc10": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc11": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc12": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc13": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc14": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc19": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc22": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc23": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc24": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc7": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc16": {
+            "type": "string",
+            "nullable": true
+          },
+          "AAcc10Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc11Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc12Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc13Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc14Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc16Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc19Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc1Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc22Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc23Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc24Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc2Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc3Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc4Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc5Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc6Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc7Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "AAcc9Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "Factor1FAnbar2Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "Factor1FAnbarNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "KalaMs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KalaM"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "categoryDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Check": {
+        "type": "object",
+        "properties": {
+          "CCheck": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "CDateC": {
+            "type": "string",
+            "nullable": true
+          },
+          "CBank": {
+            "type": "string",
+            "nullable": true
+          },
+          "CShobeh": {
+            "type": "string",
+            "nullable": true
+          },
+          "CNoJary": {
+            "type": "string",
+            "nullable": true
+          },
+          "CMab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "CArzMab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "CArzType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "CDateV": {
+            "type": "string",
+            "nullable": true
+          },
+          "CKind": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "CFlag": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "CSharh": {
+            "type": "string",
+            "nullable": true
+          },
+          "CSanad": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "CRadif": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "CName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CHesab": {
+            "type": "string",
+            "nullable": true
+          },
+          "CHesab2": {
+            "type": "string",
+            "nullable": true
+          },
+          "CShahrestan": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "CPrsnCheck": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "C": {
+            "$ref": "#/components/schemas/SanadItm"
+          },
+          "CHesab2Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "CHesabNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "Payment2s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment2"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConfigDto": {
+        "type": "object",
+        "properties": {
+          "databaseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateFrom": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateTo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Factor1": {
+        "type": "object",
+        "properties": {
+          "FFactor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FKind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FMrkaz": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "FAnbar": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FMoshtari": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FSerial": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FDateTahvil": {
+            "type": "string",
+            "nullable": true
+          },
+          "FMab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FMabKol": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FPorsant": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FMabPorsant": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FKindPay": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FNoPay": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "FSanad": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FFlag": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "FDateA": {
+            "type": "string",
+            "nullable": true
+          },
+          "FUser": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FTimeU": {
+            "type": "string",
+            "nullable": true
+          },
+          "FDateU": {
+            "type": "string",
+            "nullable": true
+          },
+          "FKosor": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FEzafat": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FAnbar2": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FAccKosorat": {
+            "type": "string",
+            "nullable": true
+          },
+          "FAccEzafat": {
+            "type": "string",
+            "nullable": true
+          },
+          "FFixKosorat": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "FFixEzafat": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "FFixPorsant": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "FPrint": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FKdarsad": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "FAccAnbar": {
+            "type": "string",
+            "nullable": true
+          },
+          "FMaliat": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FAvarez": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FDriverName": {
+            "type": "string",
+            "nullable": true
+          },
+          "F": {
+            "$ref": "#/components/schemas/Payment1"
+          },
+          "FAccEzafatNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "FAccKosoratNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "FAnbar2Navigation": {
+            "$ref": "#/components/schemas/Anbar"
+          },
+          "FAnbarNavigation": {
+            "$ref": "#/components/schemas/Anbar"
+          },
+          "FMoshtariNavigation": {
+            "$ref": "#/components/schemas/Moshtari"
+          },
+          "FPorsantNavigation": {
+            "$ref": "#/components/schemas/Moshtari"
+          },
+          "FSanadNavigation": {
+            "$ref": "#/components/schemas/Sanad"
+          },
+          "InEditFactor": {
+            "$ref": "#/components/schemas/InEditFactor"
+          },
+          "Factor2s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor2"
+            },
+            "nullable": true
+          },
+          "KafactorLs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KafactorL"
+            },
+            "nullable": true
+          },
+          "SanadItms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SanadItm"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Factor2": {
+        "type": "object",
+        "properties": {
+          "FkFactor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FkRadif": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FkKala": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FkNum": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkNumKoli": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FkTol": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkArze": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkV": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FkTdad": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FkMab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkKindArz": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FkArz": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkModat": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "FkDateModat": {
+            "type": "string",
+            "nullable": true
+          },
+          "FkSharh": {
+            "type": "string",
+            "nullable": true
+          },
+          "FkKdarsad": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkMaliat": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkAvarez": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FkKalaNavigation": {
+            "$ref": "#/components/schemas/Kala"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FactorDetail": {
+        "type": "object",
+        "properties": {
+          "K_Code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "K_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "FK_Numkoli": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "K_zarib": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "K_Vahed": {
+            "type": "string",
+            "nullable": true
+          },
+          "FK_Num": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FK_Mab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "FK_Mab_koli": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FactorSubmit": {
+        "type": "object",
+        "properties": {
+          "F_Markz": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "LoginId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Anbar": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "MoshtaryId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Sharh": {
+            "type": "string",
+            "nullable": true
+          },
+          "factorDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FactorDetail"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Goroh": {
+        "type": "object",
+        "properties": {
+          "GhCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "GhName": {
+            "type": "string",
+            "nullable": true
+          },
+          "GhKind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "GhMahiat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Onvans": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Onvan"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GorohK": {
+        "type": "object",
+        "properties": {
+          "GkCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "GkName": {
+            "type": "string",
+            "nullable": true
+          },
+          "GkInKharid": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "GkInForosh": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "GkInKhadmat": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "Kalas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Kala"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GorohM": {
+        "type": "object",
+        "properties": {
+          "GmCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "GmName": {
+            "type": "string",
+            "nullable": true
+          },
+          "GmInKharid": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "GmInForosh": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "GmInPosnt": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GorohT": {
+        "type": "object",
+        "properties": {
+          "TCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TName": {
+            "type": "string",
+            "nullable": true
+          },
+          "KCodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Kala"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HsbPrsnsKoli": {
+        "type": "object",
+        "properties": {
+          "Brws": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KindFactor": {
+            "type": "string"
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "No": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "kind": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sharh": {
+            "type": "string",
+            "nullable": true
+          },
+          "Bes": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bed": {
+            "type": "number",
+            "format": "double"
+          },
+          "F_Factor": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "F": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Mande": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InEditFactor": {
+        "type": "object",
+        "properties": {
+          "FFactor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "FFactorNavigation": {
+            "$ref": "#/components/schemas/Factor1"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InEditKhadamat": {
+        "type": "object",
+        "properties": {
+          "KhNo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "KhNoNavigation": {
+            "$ref": "#/components/schemas/Khadamat"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InEditPayment": {
+        "type": "object",
+        "properties": {
+          "P1Kind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "P1No": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "P1": {
+            "$ref": "#/components/schemas/Payment1"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InEditSanad": {
+        "type": "object",
+        "properties": {
+          "SSanad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "SSanadNavigation": {
+            "$ref": "#/components/schemas/Sanad"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Kafactor": {
+        "type": "object",
+        "properties": {
+          "KaFactor1": {
+            "type": "string",
+            "nullable": true
+          },
+          "KaName": {
+            "type": "string",
+            "nullable": true
+          },
+          "KaKind": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "KaDarsad": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KaSabet": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KaAcc": {
+            "type": "string",
+            "nullable": true
+          },
+          "KaAccNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "KafactorLs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KafactorL"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "KafactorL": {
+        "type": "object",
+        "properties": {
+          "LFactor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LKa": {
+            "type": "string",
+            "nullable": true
+          },
+          "LDarsad": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "LSabet": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "LFactorNavigation": {
+            "$ref": "#/components/schemas/Factor1"
+          },
+          "LKaNavigation": {
+            "$ref": "#/components/schemas/Kafactor"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Kala": {
+        "type": "object",
+        "properties": {
+          "KCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "KGoroh": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "KName": {
+            "type": "string",
+            "nullable": true
+          },
+          "KVahed": {
+            "type": "string",
+            "nullable": true
+          },
+          "KVahedKoli": {
+            "type": "string",
+            "nullable": true
+          },
+          "KZarib": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KForoshM": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KArz": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KArzMab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KMinF": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KMaxF": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KForoshH": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFani": {
+            "type": "string",
+            "nullable": true
+          },
+          "KSharh": {
+            "type": "string",
+            "nullable": true
+          },
+          "KPic": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "KLog": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "KLan": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KNameL": {
+            "type": "string",
+            "nullable": true
+          },
+          "KTolid": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KHtolid": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KSarbar": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KHtmam": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KBarcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "KOmde": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KVazn": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KDarsad": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KKeshvar": {
+            "type": "string",
+            "nullable": true
+          },
+          "KFmonth": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFyear": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth3": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth4": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth1": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth5": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth6": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth7": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth8": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth9": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth10": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth11": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFmonth12": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KMaliatIs": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "KMaliat": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KAvarezIs": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "KAvarez": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KFani2": {
+            "type": "string",
+            "nullable": true
+          },
+          "KPorsant": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KIsBarcode": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "KForoshN": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "KForoshMd": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "KForoshMsrf": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "KGorohNavigation": {
+            "$ref": "#/components/schemas/GorohK"
+          },
+          "Factor2s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor2"
+            },
+            "nullable": true
+          },
+          "KalaMs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KalaM"
+            },
+            "nullable": true
+          },
+          "KalaTTKalaItmNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KalaT"
+            },
+            "nullable": true
+          },
+          "KalaTTKalaNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KalaT"
+            },
+            "nullable": true
+          },
+          "Sefaresh2s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sefaresh2"
+            },
+            "nullable": true
+          },
+          "TCodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GorohT"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "KalaM": {
+        "type": "object",
+        "properties": {
+          "KmCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "KmAnbar": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "KmMojKol": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmMoj": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmArzesh": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmMinMoj": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmSefaresh": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmRadif": {
+            "type": "string",
+            "nullable": true
+          },
+          "KmShomaresh": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmEndMoj": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmEndMojKol": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmEndArzesh": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmLastArzesh": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "KmArzArzesh": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmEndArzArzesh": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmLastArzArzesh": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "KmMaxMoj": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KmKindArz": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KKeshvar": {
+            "type": "string",
+            "nullable": true
+          },
+          "KmAnbarNavigation": {
+            "$ref": "#/components/schemas/Anbar"
+          },
+          "KmCodeNavigation": {
+            "$ref": "#/components/schemas/Kala"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KalaT": {
+        "type": "object",
+        "properties": {
+          "TKala": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TRadif": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TKalaItm": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "TNum": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "TMab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "TKalaItmNavigation": {
+            "$ref": "#/components/schemas/Kala"
+          },
+          "TKalaNavigation": {
+            "$ref": "#/components/schemas/Kala"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Khadamat": {
+        "type": "object",
+        "properties": {
+          "KhMarkaz": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "KhNo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "KhDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhMoshtari": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KhMname": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhSanad": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KhUser": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KhDateU": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhTimeU": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhSerial": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhShrh": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhAcc": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhShrh2": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhKind": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhMotealegh": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhSerial2": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhFactor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KhDateF": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhDateG": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhOjrat": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KhGhatat": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KhSum": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "KhNoPay": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "KhKindPay": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KhDateT": {
+            "type": "string",
+            "nullable": true
+          },
+          "KhKalaName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Kh": {
+            "$ref": "#/components/schemas/Payment1"
+          },
+          "KhAccNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "KhMoshtariNavigation": {
+            "$ref": "#/components/schemas/Moshtari"
+          },
+          "KhSanadNavigation": {
+            "$ref": "#/components/schemas/Sanad"
+          },
+          "InEditKhadamat": {
+            "$ref": "#/components/schemas/InEditKhadamat"
+          },
+          "SanadItms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SanadItm"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Markaz": {
+        "type": "object",
+        "properties": {
+          "ZCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ZName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ZFlag": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Moshtari": {
+        "type": "object",
+        "properties": {
+          "MCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MGoroh": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MName": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAtbar": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "MTel1": {
+            "type": "string",
+            "nullable": true
+          },
+          "MTel2": {
+            "type": "string",
+            "nullable": true
+          },
+          "MMobil": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "MMeli": {
+            "type": "string",
+            "nullable": true
+          },
+          "MLog": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "MLogHsab": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "MKol": {
+            "type": "string",
+            "nullable": true
+          },
+          "MMoein": {
+            "type": "string",
+            "nullable": true
+          },
+          "MTfzili": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAcc": {
+            "type": "string",
+            "nullable": true
+          },
+          "MPic": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "MTxt": {
+            "type": "string",
+            "nullable": true
+          },
+          "MHmkar": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "MLan": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "MNameL": {
+            "type": "string",
+            "nullable": true
+          },
+          "MOnvan": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "MDateList": {
+            "type": "string",
+            "nullable": true
+          },
+          "MEconomy": {
+            "type": "string",
+            "nullable": true
+          },
+          "MPost": {
+            "type": "string",
+            "nullable": true
+          },
+          "MCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "MOstan": {
+            "type": "string",
+            "nullable": true
+          },
+          "MPorsant": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "MEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "MCodeMantagh": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "MTel3": {
+            "type": "string",
+            "nullable": true
+          },
+          "MTel4": {
+            "type": "string",
+            "nullable": true
+          },
+          "MMobile2": {
+            "type": "string",
+            "nullable": true
+          },
+          "MTelSms": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "MSabt": {
+            "type": "string",
+            "nullable": true
+          },
+          "MModir": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MoshtariDto": {
+        "type": "object",
+        "properties": {
+          "MGoroh": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MName": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAtbar": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "MMobil": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "MMeli": {
+            "type": "string",
+            "nullable": true
+          },
+          "MHmkar": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "MPost": {
+            "type": "string",
+            "nullable": true
+          },
+          "MCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "MOstan": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MoshtariListResponse": {
+        "type": "object",
+        "properties": {
+          "Moshtaris": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Moshtari"
+            },
+            "nullable": true
+          },
+          "gorohMs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GorohM"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Onvan": {
+        "type": "object",
+        "properties": {
+          "OGoroh": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "OKol": {
+            "type": "string",
+            "nullable": true
+          },
+          "OMoein": {
+            "type": "string",
+            "nullable": true
+          },
+          "OTfzili": {
+            "type": "string",
+            "nullable": true
+          },
+          "OAcc": {
+            "type": "string",
+            "nullable": true
+          },
+          "OName": {
+            "type": "string",
+            "nullable": true
+          },
+          "OSub": {
+            "type": "boolean"
+          },
+          "OBed": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "OBes": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "OArzBed": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "OArzBes": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "OSanad": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "OKind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "OTemp": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "OInUsed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "OFlag": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "ONoDarayi": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "OBedBes": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "OGorohNavigation": {
+            "$ref": "#/components/schemas/Goroh"
+          },
+          "AnbarAAcc10Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc11Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc12Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc13Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc14Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc16Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc19Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc1Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc22Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc23Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc24Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc2Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc3Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc4Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc5Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc6Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc7Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "AnbarAAcc9Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Anbar"
+            },
+            "nullable": true
+          },
+          "CheckCHesab2Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Check"
+            },
+            "nullable": true
+          },
+          "CheckCHesabNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Check"
+            },
+            "nullable": true
+          },
+          "Factor1FAccEzafatNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "Factor1FAccKosoratNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "Kafactors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Kafactor"
+            },
+            "nullable": true
+          },
+          "Khadamats": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Khadamat"
+            },
+            "nullable": true
+          },
+          "Moshtaris": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Moshtari"
+            },
+            "nullable": true
+          },
+          "Payment1P1Acc1Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment1"
+            },
+            "nullable": true
+          },
+          "Payment1P1Acc2Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment1"
+            },
+            "nullable": true
+          },
+          "Payment2P2Acc2Navigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment2"
+            },
+            "nullable": true
+          },
+          "Payment2P2AccNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment2"
+            },
+            "nullable": true
+          },
+          "SanadItms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SanadItm"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Payment1": {
+        "type": "object",
+        "properties": {
+          "P1Markaz": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "P1Kind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "P1No": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "P1Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "P1Moshtari": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "P1Sanad": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "P1IsArz": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "P1User": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "P1DateU": {
+            "type": "string",
+            "nullable": true
+          },
+          "P1TimeU": {
+            "type": "string",
+            "nullable": true
+          },
+          "P1Sum": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "P1Acc1": {
+            "type": "string",
+            "nullable": true
+          },
+          "P1Acc2": {
+            "type": "string",
+            "nullable": true
+          },
+          "P1Acc1Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "P1Acc2Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "P1MoshtariNavigation": {
+            "$ref": "#/components/schemas/Moshtari"
+          },
+          "P1SanadNavigation": {
+            "$ref": "#/components/schemas/Sanad"
+          },
+          "Factor1s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "InEditPayments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InEditPayment"
+            },
+            "nullable": true
+          },
+          "Khadamats": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Khadamat"
+            },
+            "nullable": true
+          },
+          "Payment2s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment2"
+            },
+            "nullable": true
+          },
+          "SanadItms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SanadItm"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Payment2": {
+        "type": "object",
+        "properties": {
+          "P2Kind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "P2No": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "P2Radif": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "P2KindP": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "P2Check": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "P2Acc": {
+            "type": "string",
+            "nullable": true
+          },
+          "P2Shrh": {
+            "type": "string",
+            "nullable": true
+          },
+          "P2Mab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "P2Acc2": {
+            "type": "string",
+            "nullable": true
+          },
+          "P2ArzMab": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "P2ArzType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "P2KindC": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "P2ArzKol": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "P2": {
+            "$ref": "#/components/schemas/Payment1"
+          },
+          "P2Acc2Navigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "P2AccNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "P2CheckNavigation": {
+            "$ref": "#/components/schemas/Check"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
+      "Sanad": {
+        "type": "object",
+        "properties": {
+          "SNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SSanad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "SMarkaz": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "SFlag": {
+            "type": "boolean"
+          },
+          "SUser": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "STimeU": {
+            "type": "string",
+            "nullable": true
+          },
+          "SDateU": {
+            "type": "string",
+            "nullable": true
+          },
+          "STemp": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "SPrint": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "SInEdit": {
+            "type": "boolean"
+          },
+          "SIsArz": {
+            "type": "boolean"
+          },
+          "SType": {
+            "type": "string",
+            "nullable": true
+          },
+          "InEditSanad": {
+            "$ref": "#/components/schemas/InEditSanad"
+          },
+          "Factor1s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "Khadamats": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Khadamat"
+            },
+            "nullable": true
+          },
+          "Payment1s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment1"
+            },
+            "nullable": true
+          },
+          "SanadItms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SanadItm"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sanad1400": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "s_user": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "s_date": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SanadItm": {
+        "type": "object",
+        "properties": {
+          "SSanad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Radif": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Acc": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sharh": {
+            "type": "string",
+            "nullable": true
+          },
+          "Bed": {
+            "type": "number",
+            "format": "double"
+          },
+          "ArzBed": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "Bes": {
+            "type": "number",
+            "format": "double"
+          },
+          "ArzBes": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ACode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "FFactor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "PPayment": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "PKind": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "HHesab": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "KhKhadamat": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "ArzKol": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "BBar": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "AccNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "FFactorNavigation": {
+            "$ref": "#/components/schemas/Factor1"
+          },
+          "KhKhadamatNavigation": {
+            "$ref": "#/components/schemas/Khadamat"
+          },
+          "P": {
+            "$ref": "#/components/schemas/Payment1"
+          },
+          "SSanadNavigation": {
+            "$ref": "#/components/schemas/Sanad"
+          },
+          "Checks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Check"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sefaresh1": {
+        "type": "object",
+        "properties": {
+          "S1No": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "S1Mrkaz": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "S1Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "S1Vahed": {
+            "type": "string",
+            "nullable": true
+          },
+          "S1Kind": {
+            "type": "boolean"
+          },
+          "S1User": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "S1Foroshande": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sefaresh2s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sefaresh2"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sefaresh2": {
+        "type": "object",
+        "properties": {
+          "S2No": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "S2Radif": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "S2Kala": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "S2Num": {
+            "type": "number",
+            "format": "double"
+          },
+          "S2Shrh": {
+            "type": "string",
+            "nullable": true
+          },
+          "S2DateR": {
+            "type": "string",
+            "nullable": true
+          },
+          "S2Kind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "S2Num2": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "S2DateE": {
+            "type": "string",
+            "nullable": true
+          },
+          "S2KalaNavigation": {
+            "$ref": "#/components/schemas/Kala"
+          },
+          "S2NoNavigation": {
+            "$ref": "#/components/schemas/Sefaresh1"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServerDetail": {
+        "type": "object",
+        "properties": {
+          "YDaftar": {
+            "type": "string",
+            "nullable": true
+          },
+          "YYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "YCompany": {
+            "type": "string",
+            "nullable": true
+          },
+          "YDbname": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "serverDetailDto": {
+        "required": [
+          "company",
+          "daftar",
+          "year"
+        ],
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "number",
+            "format": "float"
+          },
+          "daftar": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "UNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "UName": {
+            "type": "string",
+            "nullable": true
+          },
+          "UKind": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "UAdd": {
+            "type": "boolean"
+          },
+          "UDele": {
+            "type": "boolean"
+          },
+          "UEsla": {
+            "type": "boolean"
+          },
+          "UList": {
+            "type": "boolean"
+          },
+          "UAddDb": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "UDelDb": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "UTimeF": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTimeE": {
+            "type": "string",
+            "nullable": true
+          },
+          "UDateL": {
+            "type": "string",
+            "nullable": true
+          },
+          "UHgd": {
+            "type": "string",
+            "nullable": true
+          },
+          "UActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPasswordDTO": {
+        "required": [
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserResault": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "markazes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Markaz"
+            },
+            "nullable": true
+          },
+          "serverDetail": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServerDetail"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -14,7 +14,6 @@ namespace CityInfoApi.Models
             Sefaresh2s = new HashSet<Sefaresh2>();
             TCodes = new HashSet<GorohT>();
         }
-        public int Id { get; set; }
         public int KCode { get; set; }
         public int KGoroh { get; set; }
         public string? KName { get; set; }
