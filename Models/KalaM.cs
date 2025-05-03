@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -6,7 +6,7 @@ namespace CityInfoApi.Models
     public partial class KalaM
     {
         public int KmCode { get; set; }
-        public byte KmAnbar { get; set; }
+        public long KmAnbar { get; set; }
         public double? KmMojKol { get; set; }
         public double? KmMoj { get; set; }
         public double? KmArzesh { get; set; }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -22,8 +22,8 @@ namespace CityInfoApi.Models
         public short? CKind { get; set; }
         public bool? CFlag { get; set; }
         public string? CSharh { get; set; }
-        public int? CSanad { get; set; }
-        public int? CRadif { get; set; }
+        public long CSanad { get; set; }
+        public long CRadif { get; set; }
         public string? CName { get; set; }
         public string? CHesab { get; set; }
         public string? CHesab2 { get; set; }

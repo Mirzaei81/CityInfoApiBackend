@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -6,22 +6,22 @@ namespace CityInfoApi.Models
     public partial class Rfactor1
     {
         public long RNo { get; set; }
-        public int FFactor { get; set; }
-        public int FNo { get; set; }
+        public long FFactor { get; set; }
+        public long FNo { get; set; }
         public byte FKind { get; set; }
         public byte FMrkaz { get; set; }
         public string FDate { get; set; } = null!;
         public byte FAnbar { get; set; }
-        public int? FMoshtari { get; set; }
-        public int? FSerial { get; set; }
+        public long FMoshtari { get; set; }
+        public long FSerial { get; set; }
         public string? FDateTahvil { get; set; }
         public double? FMab { get; set; }
         public double? FMabKol { get; set; }
-        public int? FPorsant { get; set; }
+        public long FPorsant { get; set; }
         public double? FMabPorsant { get; set; }
         public byte? FKindPay { get; set; }
         public long? FNoPay { get; set; }
-        public int? FSanad { get; set; }
+        public long FSanad { get; set; }
         public bool? FFlag { get; set; }
         public string? FDateA { get; set; }
         public byte? FUser { get; set; }
@@ -35,7 +35,7 @@ namespace CityInfoApi.Models
         public bool? FFixKosorat { get; set; }
         public bool? FFixEzafat { get; set; }
         public bool? FFixPorsant { get; set; }
-        public int? FPrint { get; set; }
+        public long FPrlong { get; set; }
         public bool? FKdarsad { get; set; }
         public string? FAccAnbar { get; set; }
         public double? FMaliat { get; set; }

@@ -1,11 +1,14 @@
-﻿namespace CityInfoApi.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace CityInfoApi.Models_new
 {
     public class HsbPrsnsKoli
     {
         public short? Brws { get; set; }
         public char KindFactor { get; set; }
         public string? Date { get; set; }
-        public int? No { get; set; }
+        [Key]
+        public long No { get; set; }
         public string? kind { get; set; }
         public string? Sharh { get; set; }
 
@@ -14,9 +17,9 @@
 
         public long? F_Factor { get; set; }
 
-        public int? F { get; set; }
+        public long F { get; set; }
 
-        public int Mande { get; set; }
+        public long Mande { get; set; }
     }
 
 

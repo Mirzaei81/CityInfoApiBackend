@@ -8,8 +8,6 @@ namespace CityInfoApi.Models
         public Factor1()
         {
             Factor2s = new HashSet<Factor2>();
-            KafactorLs = new HashSet<KafactorL>();
-            SanadItms = new HashSet<SanadItm>();
         }
 
         public int FFactor { get; set; }
@@ -47,18 +45,11 @@ namespace CityInfoApi.Models
         public double? FMaliat { get; set; }
         public double? FAvarez { get; set; }
         public string? FDriverName { get; set; }
+        public string? FUid { get; set; }
+        public string? FRef { get; set; }
+        public string? FLog { get; set; }
+        public string? FTaxId { get; set; }
 
-        public virtual Payment1? F { get; set; }
-        public virtual Onvan? FAccEzafatNavigation { get; set; }
-        public virtual Onvan? FAccKosoratNavigation { get; set; }
-        public virtual Anbar? FAnbar2Navigation { get; set; }
-        public virtual Anbar FAnbarNavigation { get; set; } = null!;
-        public virtual Moshtari? FMoshtariNavigation { get; set; }
-        public virtual Moshtari? FPorsantNavigation { get; set; }
-        public virtual Sanad? FSanadNavigation { get; set; }
-        public virtual InEditFactor InEditFactor { get; set; } = null!;
         public virtual ICollection<Factor2> Factor2s { get; set; }
-        public virtual ICollection<KafactorL> KafactorLs { get; set; }
-        public virtual ICollection<SanadItm> SanadItms { get; set; }
     }
 }

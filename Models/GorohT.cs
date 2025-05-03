@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CityInfoApi.Models
 {
@@ -10,7 +11,8 @@ namespace CityInfoApi.Models
             KCodes = new HashSet<Kala>();
         }
 
-        public int TCode { get; set; }
+        [Key]
+        public long TCode { get; set; }
         public string? TName { get; set; }
 
         public virtual ICollection<Kala> KCodes { get; set; }

@@ -8,9 +8,9 @@ namespace CityInfoApi.Dtos
 {
     public class categoryDTO
     {
-        public int id { get; set; }
+        public long id { get; set; }
         public string name { get; set; }= String.Empty;
-        public categoryDTO(int Gid,string Gname)
+        public categoryDTO(long Gid,string Gname)
         {
             id = Gid;
             name = Gname;

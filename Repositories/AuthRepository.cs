@@ -1,14 +1,8 @@
 ﻿using CityInfoApi.AlmasMain;
 using CityInfoApi.Dtos;
-using CityInfoApi.Models;
+using CityInfoApi.Models_new;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CityInfoApi.Repositories
 {

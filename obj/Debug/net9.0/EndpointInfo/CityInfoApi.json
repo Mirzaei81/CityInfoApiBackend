@@ -798,9 +798,6 @@
             "type": "string",
             "nullable": true
           },
-          "AAcc10Navigation": {
-            "$ref": "#/components/schemas/Onvan"
-          },
           "AAcc11Navigation": {
             "$ref": "#/components/schemas/Onvan"
           },
@@ -817,9 +814,6 @@
             "$ref": "#/components/schemas/Onvan"
           },
           "AAcc19Navigation": {
-            "$ref": "#/components/schemas/Onvan"
-          },
-          "AAcc1Navigation": {
             "$ref": "#/components/schemas/Onvan"
           },
           "AAcc22Navigation": {
@@ -852,20 +846,6 @@
           "AAcc9Navigation": {
             "$ref": "#/components/schemas/Onvan"
           },
-          "Factor1FAnbar2Navigations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Factor1"
-            },
-            "nullable": true
-          },
-          "Factor1FAnbarNavigations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Factor1"
-            },
-            "nullable": true
-          },
           "KalaMs": {
             "type": "array",
             "items": {
@@ -881,7 +861,7 @@
         "properties": {
           "id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "name": {
             "type": "string",
@@ -976,14 +956,12 @@
             "format": "int32",
             "nullable": true
           },
+          "CSayadi": {
+            "type": "string",
+            "nullable": true
+          },
           "C": {
             "$ref": "#/components/schemas/SanadItm"
-          },
-          "CHesab2Navigation": {
-            "$ref": "#/components/schemas/Onvan"
-          },
-          "CHesabNavigation": {
-            "$ref": "#/components/schemas/Onvan"
           },
           "Payment2s": {
             "type": "array",
@@ -1172,6 +1150,22 @@
             "type": "string",
             "nullable": true
           },
+          "FUid": {
+            "type": "string",
+            "nullable": true
+          },
+          "FRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "FLog": {
+            "type": "string",
+            "nullable": true
+          },
+          "FTaxId": {
+            "type": "string",
+            "nullable": true
+          },
           "F": {
             "$ref": "#/components/schemas/Payment1"
           },
@@ -1311,6 +1305,9 @@
             "format": "double",
             "nullable": true
           },
+          "FkFactorNavigation": {
+            "$ref": "#/components/schemas/Factor1"
+          },
           "FkKalaNavigation": {
             "$ref": "#/components/schemas/Kala"
           }
@@ -1330,8 +1327,7 @@
           },
           "FK_Numkoli": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int64"
           },
           "K_zarib": {
             "type": "number",
@@ -1477,6 +1473,13 @@
           "GmInPosnt": {
             "type": "boolean",
             "nullable": true
+          },
+          "Moshtaris": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Moshtari"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1519,8 +1522,7 @@
           },
           "No": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int64"
           },
           "kind": {
             "type": "string",
@@ -1545,12 +1547,11 @@
           },
           "F": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int64"
           },
           "Mande": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -1964,6 +1965,10 @@
           "KForoshMsrf": {
             "type": "integer",
             "format": "int64",
+            "nullable": true
+          },
+          "KMali": {
+            "type": "string",
             "nullable": true
           },
           "KGorohNavigation": {
@@ -2459,6 +2464,47 @@
           },
           "MModir": {
             "type": "boolean"
+          },
+          "MShobe": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAccNavigation": {
+            "$ref": "#/components/schemas/Onvan"
+          },
+          "MGorohNavigation": {
+            "$ref": "#/components/schemas/GorohM"
+          },
+          "MoshtariTkmili": {
+            "$ref": "#/components/schemas/MoshtariTkmili"
+          },
+          "Factor1FMoshtariNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "Factor1FPorsantNavigations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factor1"
+            },
+            "nullable": true
+          },
+          "Khadamats": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Khadamat"
+            },
+            "nullable": true
+          },
+          "Payment1s": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment1"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2527,6 +2573,115 @@
               "$ref": "#/components/schemas/GorohM"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MoshtariTkmili": {
+        "type": "object",
+        "properties": {
+          "MCodeM": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MFather": {
+            "type": "string",
+            "nullable": true
+          },
+          "MTavalod": {
+            "type": "string",
+            "nullable": true
+          },
+          "MSadere": {
+            "type": "string",
+            "nullable": true
+          },
+          "MShnasnameh": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAddressMnzl": {
+            "type": "string",
+            "nullable": true
+          },
+          "MAddressKar": {
+            "type": "string",
+            "nullable": true
+          },
+          "MVsighe": {
+            "type": "string",
+            "nullable": true
+          },
+          "MDateFirst": {
+            "type": "string",
+            "nullable": true
+          },
+          "MDateEnd": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn1": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn1CodeMli": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn1Tel": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn1Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn1Vsighe": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn2": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn2CodeMli": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn2Tel": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn2Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn2Vsighe": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn3": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn3CodeMli": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn3Tel": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn3Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "MZmn3Vsighe": {
+            "type": "string",
+            "nullable": true
+          },
+          "MCodeMNavigation": {
+            "$ref": "#/components/schemas/Moshtari"
           }
         },
         "additionalProperties": false
@@ -2615,13 +2770,6 @@
           },
           "OGorohNavigation": {
             "$ref": "#/components/schemas/Goroh"
-          },
-          "AnbarAAcc10Navigations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Anbar"
-            },
-            "nullable": true
           },
           "AnbarAAcc11Navigations": {
             "type": "array",
@@ -3137,15 +3285,15 @@
         "properties": {
           "id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "s_user": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "s_date": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -3350,7 +3498,7 @@
           },
           "YYear": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "YCompany": {
             "type": "string",
@@ -3389,7 +3537,7 @@
         "properties": {
           "UNo": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "UName": {
             "type": "string",

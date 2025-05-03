@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CityInfoApi.Models
 {
@@ -10,6 +11,7 @@ namespace CityInfoApi.Models
             Kalas = new HashSet<Kala>();
         }
 
+        [Key]
         public int GkCode { get; set; }
         public string? GkName { get; set; }
         public bool? GkInKharid { get; set; }

@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace CityInfoApi.Models
@@ -11,7 +12,8 @@ namespace CityInfoApi.Models
             Moshtaris = new HashSet<Moshtari>();
         }
 
-        public int GmCode { get; set; }
+        [Key]
+        public long GmCode { get; set; }
         public string? GmName { get; set; }
         public bool? GmInKharid { get; set; }
         public bool? GmInForosh { get; set; }

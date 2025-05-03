@@ -1,5 +1,5 @@
 ﻿using CityInfoApi.Dtos;
-using CityInfoApi.Models;
+using CityInfoApi.Models_new;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -127,7 +127,7 @@ namespace CityInfoApi.Controllers
         {
             try
             {
-                int F_No =await  _iCityInfoReposit.SubmitFactorAsync(factorDetails);
+                long F_No =await  _iCityInfoReposit.SubmitFactorAsync(factorDetails);
                 string FacUri = $"api/Fac/{F_No}";
                 return  Created(FacUri,new {Uri=FacUri, id = F_No });
             }catch(SqlException exception)

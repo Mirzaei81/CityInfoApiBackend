@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -10,10 +10,10 @@ namespace CityInfoApi.Models
         public byte P1Kind { get; set; }
         public long P1No { get; set; }
         public string P1Date { get; set; } = null!;
-        public int? P1Moshtari { get; set; }
-        public int? P1Sanad { get; set; }
+        public long P1Moshtari { get; set; }
+        public long P1Sanad { get; set; }
         public bool P1IsArz { get; set; }
-        public int? P1User { get; set; }
+        public long P1User { get; set; }
         public string? P1DateU { get; set; }
         public string? P1TimeU { get; set; }
         public double? P1Sum { get; set; }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -8,9 +8,9 @@ namespace CityInfoApi.Models
         public long? RNo { get; set; }
         public byte P2Kind { get; set; }
         public long P2No { get; set; }
-        public int P2Radif { get; set; }
+        public long P2Radif { get; set; }
         public byte? P2KindP { get; set; }
-        public int? P2Check { get; set; }
+        public long P2Check { get; set; }
         public string? P2Acc { get; set; }
         public string? P2Shrh { get; set; }
         public double? P2Mab { get; set; }

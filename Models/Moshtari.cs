@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -14,8 +14,8 @@ namespace CityInfoApi.Models
             Payment1s = new HashSet<Payment1>();
         }
 
-        public int MCode { get; set; }
-        public int MGoroh { get; set; }
+        public long MCode { get; set; }
+        public long MGoroh { get; set; }
         public string? MName { get; set; }
         public long? MAtbar { get; set; }
         public string? MTel1 { get; set; }
@@ -42,7 +42,7 @@ namespace CityInfoApi.Models
         public string? MOstan { get; set; }
         public double? MPorsant { get; set; }
         public string? MEmail { get; set; }
-        public int? MCodeMantagh { get; set; }
+        public long MCodeMantagh { get; set; }
         public string? MTel3 { get; set; }
         public string? MTel4 { get; set; }
         public string? MMobile2 { get; set; }
@@ -53,8 +53,6 @@ namespace CityInfoApi.Models
         public virtual Onvan MAccNavigation { get; set; } = null!;
         [JsonIgnore]
         public virtual GorohM MGorohNavigation { get; set; } = null!;
-        [JsonIgnore]
-        public virtual MoshtariTkmili MoshtariTkmili { get; set; } = null!;
         [JsonIgnore]
         public virtual ICollection<Factor1> Factor1FMoshtariNavigations { get; set; }
         [JsonIgnore]

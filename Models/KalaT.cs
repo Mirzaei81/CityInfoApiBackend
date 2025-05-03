@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -7,7 +7,7 @@ namespace CityInfoApi.Models
     {
         public int TKala { get; set; }
         public int TRadif { get; set; }
-        public int? TKalaItm { get; set; }
+        public int TKalaItm { get; set; }
         public double? TNum { get; set; }
         public double? TMab { get; set; }
 

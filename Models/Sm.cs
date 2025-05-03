@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
 {
     public partial class Sm
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string CreateDate { get; set; } = null!;
         public string CreateTime { get; set; } = null!;
         public string Tel { get; set; } = null!;

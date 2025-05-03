@@ -1,4 +1,4 @@
-﻿namespace CityInfoApi.AlmasMain
+namespace CityInfoApi.AlmasMain
 {
     public partial class Markaz
     {

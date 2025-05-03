@@ -1,9 +1,12 @@
-﻿namespace CityInfoApi.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace CityInfoApi.Models_new
 {
     public class Sanad1400
     {
-        public int id { get; set; }
-        public int s_user { get; set; }
-        public int s_date { get; set; }
+        [Key]
+        public long id { get; set; }
+        public long s_user { get; set; }
+        public long s_date { get; set; }
     }
 }

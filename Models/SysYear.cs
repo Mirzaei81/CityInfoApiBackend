@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Text.Json.Serialization;
 
-namespace CityInfoApi.Models
+namespace CityInfoApi.Models_new
 {
     public partial class SysYear
     {
-        public int YDaftar { get; set; }
-        public int YYear { get; set; }
-        public int YCompany { get; set; }
+        public long YDaftar { get; set; }
+        public long YYear { get; set; }
+        public long YCompany { get; set; }
         [JsonIgnore]
         public string? YDateF { get; set; }
 
@@ -18,9 +17,9 @@ namespace CityInfoApi.Models
         [JsonIgnore]
         public bool? YFlag { get; set; }
         [JsonIgnore]
-        public int? YFirstSanad { get; set; }
+        public long YFirstSanad { get; set; }
         [JsonIgnore]
-        public int? YLastSanad { get; set; }
+        public long YLastSanad { get; set; }
         [JsonIgnore]
         public double? YMaliat { get; set; }
         [JsonIgnore]

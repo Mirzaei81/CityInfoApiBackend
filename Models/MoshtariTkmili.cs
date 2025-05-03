@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
 {
     public partial class MoshtariTkmili
     {
-        public int MCodeM { get; set; }
+        public long MCodeM { get; set; }
         public string? MFather { get; set; }
         public string? MTavalod { get; set; }
         public string? MSadere { get; set; }
@@ -31,6 +31,5 @@ namespace CityInfoApi.Models
         public string? MZmn3Address { get; set; }
         public string? MZmn3Vsighe { get; set; }
 
-        public virtual Moshtari MCodeMNavigation { get; set; } = null!;
     }
 }

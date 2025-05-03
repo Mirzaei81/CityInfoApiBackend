@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using CityInfoApi.AlmasMain;
+using CityInfoApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CityInfoApi.Models
+namespace CityInfoApi.Models_new
 {
     public partial class AlmasMainContext : DbContext
     {

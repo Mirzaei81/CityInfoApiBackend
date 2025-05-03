@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -9,8 +9,6 @@ namespace CityInfoApi.Models
         {
             Factor2s = new HashSet<Factor2>();
             KalaMs = new HashSet<KalaM>();
-            KalaTTKalaItmNavigations = new HashSet<KalaT>();
-            KalaTTKalaNavigations = new HashSet<KalaT>();
             Sefaresh2s = new HashSet<Sefaresh2>();
             TCodes = new HashSet<GorohT>();
         }
@@ -69,8 +67,6 @@ namespace CityInfoApi.Models
         public virtual GorohK KGorohNavigation { get; set; } = null!;
         public virtual ICollection<Factor2> Factor2s { get; set; }
         public virtual ICollection<KalaM> KalaMs { get; set; }
-        public virtual ICollection<KalaT> KalaTTKalaItmNavigations { get; set; }
-        public virtual ICollection<KalaT> KalaTTKalaNavigations { get; set; }
         public virtual ICollection<Sefaresh2> Sefaresh2s { get; set; }
 
         public virtual ICollection<GorohT> TCodes { get; set; }

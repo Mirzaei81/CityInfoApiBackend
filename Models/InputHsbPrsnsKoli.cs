@@ -1,4 +1,4 @@
-﻿namespace CityInfoApi.Models
+namespace CityInfoApi.Models
 {
     public class InputHsbPrsnsKoli
     {

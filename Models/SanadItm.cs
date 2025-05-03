@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -10,8 +10,8 @@ namespace CityInfoApi.Models
             Checks = new HashSet<Check>();
         }
 
-        public int SSanad { get; set; }
-        public int Radif { get; set; }
+        public long SSanad { get; set; }
+        public long Radif { get; set; }
         public string Acc { get; set; } = null!;
         public string? Sharh { get; set; }
         public double Bed { get; set; }
@@ -19,13 +19,13 @@ namespace CityInfoApi.Models
         public double Bes { get; set; }
         public double? ArzBes { get; set; }
         public byte? ACode { get; set; }
-        public int? FFactor { get; set; }
+        public int FFactor { get; set; }
         public long? PPayment { get; set; }
         public byte? PKind { get; set; }
-        public int? HHesab { get; set; }
+        public long HHesab { get; set; }
         public long? KhKhadamat { get; set; }
         public double? ArzKol { get; set; }
-        public int? BBar { get; set; }
+        public long BBar { get; set; }
 
         public virtual Onvan AccNavigation { get; set; } = null!;
         public virtual Factor1? FFactorNavigation { get; set; }

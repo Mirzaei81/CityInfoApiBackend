@@ -1,14 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace CityInfoApi.Models
+namespace CityInfoApi.Models_new
 {
     [Index(nameof(UName),IsUnique =true)]
     public partial class User
     {
-        public int UNo { get; set; }
+        public long UNo { get; set; }
         public string UName { get; set; } = null!;
         [JsonIgnore]
         public string URamz { get; set; } = null!;

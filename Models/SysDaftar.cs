@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-namespace CityInfoApi.Models
+namespace CityInfoApi.Models_new
 {
     public partial class SysDaftar
     {
-        public int DId { get; set; }
+        public long DId { get; set; }
         public string? DName { get; set; }
 
     }

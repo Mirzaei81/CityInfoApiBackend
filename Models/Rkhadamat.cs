@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -9,10 +9,10 @@ namespace CityInfoApi.Models
         public byte? KhMarkaz { get; set; }
         public long? KhNo { get; set; }
         public string? KhDate { get; set; }
-        public int? KhMoshtari { get; set; }
+        public long KhMoshtari { get; set; }
         public string? KhMname { get; set; }
-        public int? KhSanad { get; set; }
-        public int? KhUser { get; set; }
+        public long KhSanad { get; set; }
+        public long KhUser { get; set; }
         public string? KhDateU { get; set; }
         public string? KhTimeU { get; set; }
         public string? KhSerial { get; set; }
@@ -22,7 +22,7 @@ namespace CityInfoApi.Models
         public string? KhKind { get; set; }
         public string? KhMotealegh { get; set; }
         public string? KhSerial2 { get; set; }
-        public int? KhFactor { get; set; }
+        public long KhFactor { get; set; }
         public string? KhDateF { get; set; }
         public string? KhDateG { get; set; }
         public double? KhOjrat { get; set; }

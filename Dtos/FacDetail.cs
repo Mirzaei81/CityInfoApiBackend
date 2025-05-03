@@ -3,11 +3,12 @@ namespace CityInfoApi.Dtos
 {
     public partial class FactorDetail
     {
-        public FactorDetail(int kCode, string kName, int? fkNumkoli, double? kZarib, string kVahed, double? fkNum, double? fkMab, double? fkMabKoli)
+        public FactorDetail() { }
+        public FactorDetail(int kCode, string kName, int fkNumkoli, double kZarib, string kVahed, double fkNum, double fkMab, double fkMabKoli)
         {
             KCode = kCode;
             KName = kName;
-            FkNumkoli = fkNumkoli;
+            FkNumkoli = fkNumkoli ;
             KZarib = kZarib;
             KVahed = kVahed;
             FkNum = fkNum;
@@ -22,7 +23,7 @@ namespace CityInfoApi.Dtos
         public string KName { get; set; }
 
         [JsonPropertyName("FK_Numkoli")]
-        public int? FkNumkoli { get; set; }
+        public long FkNumkoli { get; set; }
 
         [JsonPropertyName("K_zarib")]
         public double? KZarib { get; set; }

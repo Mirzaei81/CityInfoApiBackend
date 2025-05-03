@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace CityInfoApi.Models
 {
     public class Ins2Factor
     {
-        public int RowsAffected { get; set; }
+        [Key]
+        public long RowsAffected { get; set; }
   
     }
 }

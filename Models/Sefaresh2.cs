@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
 {
     public partial class Sefaresh2
     {
-        public int S2No { get; set; }
+        public long S2No { get; set; }
         public short S2Radif { get; set; }
         public int S2Kala { get; set; }
         public double S2Num { get; set; }

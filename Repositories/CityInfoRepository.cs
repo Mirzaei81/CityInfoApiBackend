@@ -1,12 +1,9 @@
 ﻿using CityInfoApi.Dtos;
-using CityInfoApi.Models;
+using CityInfoApi.Models_new;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
-using System.Collections.Immutable;
 using System.Data;
-using System.Data.Common;
 using System.Globalization;
 using System.Transactions;
 
@@ -84,11 +81,11 @@ namespace CityInfoApi.Repositories
         {
             return await _dbcontex.Factor1s.Join(_dbcontex.Factor2s, F1 => F1.FFactor, F2 => F2.FkFactor, (F1, F2) => new { F1, F2 })
                 .Join(_dbcontex.Kalas, a => a.F2.FkKala, k => k.KCode, (a, k) => new { F1 = a.F1, F2 = a.F2, K = k })
-                .Where(F => F.F1.FNo == FK_NO).Select(a => new FactorDetail(a.K.KCode, a.K.KName, a.F2.FkNumKoli, a.K.KZarib, a.K.KVahed, a.F2.FkNum, a.F2.FkMab, a.F2.FkMab * a.F2.FkNum)).ToArrayAsync();
+                .Where(F => F.F1.FNo == FK_NO).Select(a => new FactorDetail(a.K.KCode, a.K.KName, a.F2.FkNumKoli??0, a.K.KZarib??0, a.K.KVahed, a.F2.FkNum??0, a.F2.FkMab??0, a.F2.FkMab??0 * a.F2.FkNum??0)).ToArrayAsync();
         }
-        private async Task<int> genrateF_NO(long loginId,string tmpName,int count,string today)
+        private async Task<long> genrateF_NO(long loginId,string tmpName,int count,string today)
         {
-            int F_No = await _dbcontex.Factor1s.OrderByDescending(F=>-1*F.FNo).Select(F => F.FNo).LastOrDefaultAsync();
+            long F_No = await _dbcontex.Factor1s.OrderByDescending(F=>-1*F.FNo).Select(F => F.FNo).LastOrDefaultAsync();
 
             string dbName = tmpName;
             if (F_No == default)
@@ -110,7 +107,7 @@ namespace CityInfoApi.Repositories
             }
             return F_No;
         }
-        private async void ExitFromReserv(string Chr, int no)
+        private async void ExitFromReserv(string Chr, long no)
         {
             using (SqlCommand dropCommand = new SqlCommand(" Drop Table " + "##" + _dbcontex.Database.GetDbConnection().Database.ToString() + Chr + no))
             {
@@ -122,102 +119,88 @@ namespace CityInfoApi.Repositories
             }
 
         }
-        public async Task<int> SubmitFactorAsync(FactorSubmit factorSubmition)
+        private async Task<long> ins2Factor(FactorSubmit factorSubmition)
         {
-            int F_Factor = -1;
-            int mFactor = -1;
+
+            var maxFNo = await _dbcontex.Factor1s
+                .MaxAsync(f =>f.FNo);
+            int fNo = maxFNo + 1;
+
+
+            var maxFFactor = await _dbcontex.Factor1s.MaxAsync(f => (long)f.FFactor);
+            long  newFFactor = (maxFFactor) + 1;
+
+            DateTime thisDate = DateTime.Now;
+            string timeU = thisDate.ToString("H-m");
+            PersianCalendar pc = new PersianCalendar();
+
+            string dateU = String.Format("{0}-{1}-{2}",
+                      pc.GetYear(thisDate),
+                      pc.GetMonth(thisDate),
+                      pc.GetDayOfMonth(thisDate));
+
+
+            long F_Factor = -1;
+            long mFactor = -1;
             double? mab = factorSubmition.FactorDetails.Sum(f => f.FkMab);
             double? mabKol = factorSubmition.FactorDetails.Sum(f => f.FkMabKoli);
-            SqlConnection connection =new SqlConnection(_dbcontex.Database.GetConnectionString());
-            await connection.OpenAsync();
-            transaction = connection.BeginTransaction();
-            string tmpName = "##" + _dbcontex.Database.GetDbConnection().Database + "F20";
-            DateTime today = DateTime.Now;
-            string  todayPersian = String.Format("{0}/{1}/{2}",pc.GetYear(today),pc.GetMonth(today),pc.GetDayOfMonth(today));
-            F_Factor = await genrateF_NO(factorSubmition.LoginId,tmpName,1,todayPersian);
-            using (SqlCommand cmdInsHdr = new SqlCommand("str_Ins2Factor"))
-            {
-                cmdInsHdr.Connection = connection;
-                cmdInsHdr.Transaction = transaction;
-                cmdInsHdr.CommandType = CommandType.StoredProcedure;
-                cmdInsHdr.Parameters.AddWithValue("@F_No", F_Factor);
-                cmdInsHdr.Parameters.AddWithValue("@F_Date", todayPersian);
-                cmdInsHdr.Parameters.AddWithValue("@F_Markz", factorSubmition.FMarkz);
-                cmdInsHdr.Parameters.AddWithValue("@F_User", factorSubmition.LoginId);
-                cmdInsHdr.Parameters.AddWithValue("@F_Kind", 20);
-                cmdInsHdr.Parameters.AddWithValue("@F_Anbar", factorSubmition.Anbar);
-                cmdInsHdr.Parameters.AddWithValue("@F_Moshtari", factorSubmition.MoshtaryId);
-                cmdInsHdr.Parameters.AddWithValue("@F_Anbar2", DBNull.Value);
-                cmdInsHdr.Parameters.AddWithValue("@F_Serial", DBNull.Value);
-                cmdInsHdr.Parameters.AddWithValue("@F_DateTahvil", "");
-                cmdInsHdr.Parameters.AddWithValue("@F_DateA", "");
-                cmdInsHdr.Parameters.AddWithValue("@F_Mab", mab);
-                cmdInsHdr.Parameters.AddWithValue("@F_Kosor", 0);
-                cmdInsHdr.Parameters.AddWithValue("@F_Ezafat", 0);
-                cmdInsHdr.Parameters.AddWithValue("@F_MabKol", mabKol);
-                cmdInsHdr.Parameters.AddWithValue("@F_Porsant", DBNull.Value);
-                cmdInsHdr.Parameters.AddWithValue("@F_MabPorsant", DBNull.Value);
-                cmdInsHdr.Parameters.AddWithValue("@F_FixPorsant", false);
-                cmdInsHdr.Parameters.AddWithValue("@F_Kdarsad", false);
-                cmdInsHdr.Parameters.AddWithValue("@F_Avarez", 0);
-                cmdInsHdr.Parameters.AddWithValue("@F_Maliat", 0);
-                cmdInsHdr.Parameters.AddWithValue("@F_DriverName", "");
-                cmdInsHdr.Parameters.AddWithValue("@F_AccAnbar", DBNull.Value); // txtAcc2.Text
-                var mFactorReturn = cmdInsHdr.Parameters.Add("@ReturnVal", SqlDbType.Int);
-                mFactorReturn.Direction = ParameterDirection.ReturnValue;
-                try
-                {
-                    cmdInsHdr.ExecuteNonQuery();
-                    mFactor =(int)mFactorReturn.Value;
-                    if (mFactor == -1)
-                    {
-                        await transaction.RollbackAsync();
-                        throw new NullReferenceException("new Factor Id wasn't created check sql logs");
-                    }
-                }
-                catch (SqlException expcep) { 
-                    ExitFromReserv("F20", F_Factor);
-                    throw expcep;
-                }
-            }
 
+            await _dbcontex.Database.ExecuteSqlRawAsync("" +
+                "INSERT INTO [Factor1] ([F_Factor], [F_Anbar], [F_Date], [F_DateTahvil], [F_DateU], [F_Kind], [F_Moshtari], [F_Mrkaz], [F_No],    [F_TimeU], [F_User])" +
+                "VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);",
+    newFFactor, 1, dateU, dateU, dateU, 20, factorSubmition.MoshtaryId, 1,newFFactor, timeU, factorSubmition.LoginId
+                );
+            await _dbcontex.SaveChangesAsync();
+
+            return newFFactor;
+        }
+        public async Task str_Ins2FactorITM(FactorSubmit factorSubmition,long mFactor)
+        {
             int cnt = 0;
             foreach (FactorDetail row in factorSubmition.FactorDetails)
             {
                 cnt += 1;
-                using (SqlCommand cmdInsITM = new SqlCommand("Str_ins2factorITM"))
+                Factor2 item = new Factor2
                 {
-                    cmdInsITM.Transaction = transaction;
-                    cmdInsITM.Connection =connection;
-                    cmdInsITM.CommandType = CommandType.StoredProcedure;
-                    cmdInsITM.Parameters.AddWithValue("@F_Factor", mFactor);
-                    cmdInsITM.Parameters.AddWithValue("@Radif", cnt);
-                    cmdInsITM.Parameters.AddWithValue("@Kala", row.KCode);
-                    cmdInsITM.Parameters.AddWithValue("@Sharh", cnt == 0 ? factorSubmition.Sharh :""); 
-                    cmdInsITM.Parameters.AddWithValue("@Num", row.FkNum);
-                    cmdInsITM.Parameters.AddWithValue("@NumKoli", row.FkNumkoli);
-                    cmdInsITM.Parameters.AddWithValue("@Tol", 0);
-                    cmdInsITM.Parameters.AddWithValue("@Arze", 0);
-                    cmdInsITM.Parameters.AddWithValue("@V", 0);
-                    cmdInsITM.Parameters.AddWithValue("@Tdad", 0);
-                    cmdInsITM.Parameters.AddWithValue("@Mab", row.FkMab);
-                    cmdInsITM.Parameters.AddWithValue("@KindArz", DBNull.Value);
-                    cmdInsITM.Parameters.AddWithValue("@Arz", DBNull.Value);
-                    cmdInsITM.Parameters.AddWithValue("@Modat", DBNull.Value);
-                    cmdInsITM.Parameters.AddWithValue("@DateModat", "");
-                    cmdInsITM.Parameters.AddWithValue("@Anbar", factorSubmition.Anbar);
-                    cmdInsITM.Parameters.AddWithValue("@Anbar2", -1);
-                    cmdInsITM.Parameters.AddWithValue("@Kdarsad", DBNull.Value);
-                    cmdInsITM.Parameters.AddWithValue("@Avarez", DBNull.Value);
-                    cmdInsITM.Parameters.AddWithValue("@Maliat", DBNull.Value);
-                    cmdInsITM.ExecuteNonQuery();
-                }
+                    FkFactor = (int)mFactor,
+                    FkRadif = cnt,
+                    FkKala = row.KCode,
+                    FkNum = row.FkNum,
+                    FkNumKoli = (byte)row.FkNumkoli,
+                    FkTol = 0,
+                    FkArze = 0,
+                    FkV = 0,
+                    FkTdad = 0,
+                    FkMab = row.FkMab,
+                    FkKindArz = 0,
+                    FkArz = 0,
+                    FkModat = false,
+                    FkDateModat = "",
+                    FkSharh = cnt == 0 ? factorSubmition.Sharh : "",
+                    FkKdarsad = 0,
+                    FkMaliat = 0,
+                    FkAvarez = 0,
+                };
+                await _dbcontex.Factor2s.AddAsync(item);
             }
-            await transaction.CommitAsync();
-            await connection.CloseAsync();
-            connection.Dispose();
-            connection = null;
+            await _dbcontex.SaveChangesAsync();
+
+        }
+        public async Task<long> SubmitFactorAsync(FactorSubmit factorSubmition)
+        {
+            long F_Factor = -1;
+            long mFactor = -1;
+            double? mab = factorSubmition.FactorDetails.Sum(f => f.FkMab);
+            double? mabKol = factorSubmition.FactorDetails.Sum(f => f.FkMabKoli);
+            SqlConnection connection =new SqlConnection(_dbcontex.Database.GetConnectionString());
+            F_Factor = await ins2Factor(factorSubmition);
+            await str_Ins2FactorITM(factorSubmition,F_Factor);
+
+            await connection.OpenAsync();
+            transaction = connection.BeginTransaction();
+            string tmpName = "##" + _dbcontex.Database.GetDbConnection().Database + "F20";
             ExitFromReserv("F20", F_Factor);
+            await connection.CloseAsync();
             return F_Factor;
         }
         public async Task<Moshtari> CreateMoshtariAsync(MoshtariDto moshtariDto)

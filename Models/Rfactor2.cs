@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
@@ -6,11 +6,11 @@ namespace CityInfoApi.Models
     public partial class Rfactor2
     {
         public long? RNo { get; set; }
-        public int FkFactor { get; set; }
-        public int FkRadif { get; set; }
-        public int? FkKala { get; set; }
+        public long FkFactor { get; set; }
+        public long FkRadif { get; set; }
+        public long FkKala { get; set; }
         public double? FkNum { get; set; }
-        public int? FkNumKoli { get; set; }
+        public long FkNumKoli { get; set; }
         public double? FkTol { get; set; }
         public double? FkArze { get; set; }
         public byte? FkV { get; set; }

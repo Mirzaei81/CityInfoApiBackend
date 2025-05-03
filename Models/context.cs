@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CityInfoApi.Models
+namespace CityInfoApi.Models_new
 {
     public partial class context : DbContext
     {
@@ -169,17 +169,6 @@ namespace CityInfoApi.Models
 
                 entity.Property(e => e.YYear).HasColumnName("Y_Year");
 
-                entity.HasOne(d => d.YCompanyNavigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.YCompany)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_SysYear_SysCompany");
-
-                entity.HasOne(d => d.YDaftarNavigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.YDaftar)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_SysYear_SysDaftar");
             });
 
             modelBuilder.Entity<User>(entity =>

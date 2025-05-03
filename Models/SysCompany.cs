@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
 
-namespace CityInfoApi.Models
+namespace CityInfoApi.Models_new
 {
     public partial class SysCompany
     {
-        public int CId { get; set; }
+        public long CId { get; set; }
         public string? CName { get; set; }
         public string? CEconomy { get; set; }
         public byte[]? CArm { get; set; }

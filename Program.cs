@@ -1,4 +1,4 @@
-using CityInfoApi.Models;
+using CityInfoApi.Models_new;
 using CityInfoApi.Repositories;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;

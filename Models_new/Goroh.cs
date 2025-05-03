@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CityInfoApi.Models
+namespace CityInfoApi.Models_new
 {
     public partial class Goroh
     {

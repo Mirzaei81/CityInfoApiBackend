@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
-namespace CityInfoApi.Models
-{
+namespace CityInfoApi.Models{
     public partial class Factor2
     {
         public int FkFactor { get; set; }
@@ -25,8 +23,6 @@ namespace CityInfoApi.Models
         public double? FkMaliat { get; set; }
         public double? FkAvarez { get; set; }
 
-        [JsonIgnore]
         public virtual Factor1 FkFactorNavigation { get; set; } = null!;
-        public virtual Kala? FkKalaNavigation { get; set; }
     }
 }

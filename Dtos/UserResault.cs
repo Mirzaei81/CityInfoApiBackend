@@ -1,5 +1,5 @@
 ﻿using CityInfoApi.AlmasMain;
-using CityInfoApi.Models;
+using CityInfoApi.Models_new;
 
 namespace CityInfoApi.Dtos
 {
@@ -18,11 +18,11 @@ namespace CityInfoApi.Dtos
     public class ServerDetail
     {
         public string YDaftar { get; set; }
-        public int YYear{ get; set; }
+        public long YYear{ get; set; }
         public string YCompany{ get; set; }
         public string YDbname { get; set; }
 
-        public ServerDetail(string Daftar,  int years, string companies, string yDbname)
+        public ServerDetail(string Daftar,  long years, string companies, string yDbname)
         {
             YDaftar = Daftar;
             YYear = years;

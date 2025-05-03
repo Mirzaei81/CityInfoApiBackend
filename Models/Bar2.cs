@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CityInfoApi.Models
 {
     public partial class Bar2
     {
-        public int B2No { get; set; }
-        public int B2Radif { get; set; }
-        public int? B2Moshtari { get; set; }
-        public int? B2NumKoli { get; set; }
+        public long B2No { get; set; }
+        public long B2Radif { get; set; }
+        public long B2Moshtari { get; set; }
+        public long B2NumKoli { get; set; }
         public double? B2Num { get; set; }
         public double? B2Num2 { get; set; }
         public long? B2Mab { get; set; }
