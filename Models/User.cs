@@ -8,7 +8,7 @@ namespace CityInfoApi.Models_new
     [Index(nameof(UName),IsUnique =true)]
     public partial class User
     {
-        public long UNo { get; set; }
+        public int UNo { get; set; }
         public string UName { get; set; } = null!;
         [JsonIgnore]
         public string URamz { get; set; } = null!;

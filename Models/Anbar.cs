@@ -1,3 +1,4 @@
+using CityInfoApi.Models_new;
 using System;
 using System.Collections.Generic;
 

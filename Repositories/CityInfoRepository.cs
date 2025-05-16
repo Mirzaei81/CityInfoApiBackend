@@ -11,11 +11,11 @@ namespace CityInfoApi.Repositories
 {
     public class CityInfoRepository : iCityInfoReposit
     {
-        private readonly AlmasACC _dbcontex;
+        private readonly AlmasACC14031Context _dbcontex;
         private readonly PersianCalendar pc;
         private readonly TransactionOptions transactionOption;
         private SqlTransaction transaction;
-        public CityInfoRepository(AlmasACC dbcontex)
+        public CityInfoRepository(AlmasACC14031Context dbcontex)
         {
             _dbcontex = dbcontex;
             pc = new PersianCalendar();
@@ -126,29 +126,27 @@ namespace CityInfoApi.Repositories
                 .MaxAsync(f =>f.FNo);
             int fNo = maxFNo + 1;
 
-
-            var maxFFactor = await _dbcontex.Factor1s.MaxAsync(f => (long)f.FFactor);
+            int maxFFactor = await _dbcontex.Factor1s.MaxAsync(f => f.FFactor);
             long  newFFactor = (maxFFactor) + 1;
 
             DateTime thisDate = DateTime.Now;
             string timeU = thisDate.ToString("H-m");
             PersianCalendar pc = new PersianCalendar();
 
-            string dateU = String.Format("{0}-{1}-{2}",
+            string dateU = String.Format("{2}/{1}/{0}",
                       pc.GetYear(thisDate),
                       pc.GetMonth(thisDate),
                       pc.GetDayOfMonth(thisDate));
 
 
-            long F_Factor = -1;
             long mFactor = -1;
             double? mab = factorSubmition.FactorDetails.Sum(f => f.FkMab);
             double? mabKol = factorSubmition.FactorDetails.Sum(f => f.FkMabKoli);
 
             await _dbcontex.Database.ExecuteSqlRawAsync("" +
-                "INSERT INTO [Factor1] ([F_Factor], [F_Anbar], [F_Date], [F_DateTahvil], [F_DateU], [F_Kind], [F_Moshtari], [F_Mrkaz], [F_No],    [F_TimeU], [F_User])" +
+                "INSERT INTO [Factor1] ([F_Factor], [F_Anbar], [F_Date], [F_DateU], [F_Kind], [F_Moshtari],[F_Porsant], [F_Mrkaz], [F_No],    [F_TimeU], [F_User])" +
                 "VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);",
-    newFFactor, 1, dateU, dateU, dateU, 20, factorSubmition.MoshtaryId, 1,newFFactor, timeU, factorSubmition.LoginId
+    newFFactor, 1, dateU,  dateU, 20, factorSubmition.FPorsant, 1,fNo, timeU, factorSubmition.LoginId
                 );
             await _dbcontex.SaveChangesAsync();
 

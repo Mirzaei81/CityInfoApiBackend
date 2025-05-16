@@ -1,20 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CityInfoApi.Models_new
 {
-    public partial class AlmasACC : DbContext
+    public partial class AlmasACC14031Context : DbContext
     {
-        public AlmasACC()
+        public AlmasACC14031Context()
         {
         }
 
-        public AlmasACC(DbContextOptions<AlmasACC> options)
-            : base(options)
-        {
-        }
+        private HttpContext? _httpContext;
 
         public virtual DbSet<Sanad1400> Sanad1400s { get; set; } = null!;
         public virtual DbSet<HsbPrsnsKoli> HsbPrsnsKolis { get; set; } = null!;
@@ -62,20 +58,31 @@ namespace CityInfoApi.Models_new
         public virtual DbSet<Sm> Sms { get; set; } = null!;
         public virtual DbSet<Vahed> Vaheds { get; set; } = null!;
         public virtual DbSet<View1> View1s { get; set; } = null!;
-
+        public AlmasACC14031Context(DbContextOptions<AlmasACC14031Context> options,IHttpContextAccessor httpContextAccessor)
+            : base(options)
+        {
+            _httpContext = httpContextAccessor?.HttpContext;
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=AlmasACC14031;Integrated Security=True;Encrypt=False");
-            }
+                string? DbName = _httpContext?.Request.Cookies["Configuration"];
+                if (DbName != null)
+                {
+                    string Connection = String.Format("data source=DESKTOP-LAM4N1K\\SQLEXPRESS;Database={0};Trusted_Connection=true", DbName);
+                    optionsBuilder.UseSqlServer(Connection);
+                }
+                else
+                {
+                    string Connection = "data source=DESKTOP-LAM4N1K\\SQLEXPRESS;initial catalog=AlmasACC14031;trusted_connection=true";
+                    optionsBuilder.UseSqlServer(Connection);
+                }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.UseCollation("SQL_Latin1_General_CP1256_CI_AS");
 
+            modelBuilder.Entity<HsbPrsnsKoli>().HasNoKey();
             modelBuilder.Entity<Anbar>(entity =>
             {
                 entity.HasKey(e => e.ACode)
@@ -209,6 +216,96 @@ namespace CityInfoApi.Models_new
                     .HasMaxLength(30)
                     .HasColumnName("A_NameA")
                     .UseCollation("Arabic_CI_AI");
+
+                entity.HasOne(d => d.AAcc1Navigation)
+                    .WithMany(p => p.AnbarAAcc1Navigations)
+                    .HasForeignKey(d => d.AAcc1)
+                    .HasConstraintName("FK_Anbar_Onvan");
+
+                entity.HasOne(d => d.AAcc10Navigation)
+                    .WithMany(p => p.AnbarAAcc10Navigations)
+                    .HasForeignKey(d => d.AAcc10)
+                    .HasConstraintName("FK_Anbar_Onvan7");
+
+                entity.HasOne(d => d.AAcc11Navigation)
+                    .WithMany(p => p.AnbarAAcc11Navigations)
+                    .HasForeignKey(d => d.AAcc11)
+                    .HasConstraintName("FK_Anbar_Onvan8");
+
+                entity.HasOne(d => d.AAcc12Navigation)
+                    .WithMany(p => p.AnbarAAcc12Navigations)
+                    .HasForeignKey(d => d.AAcc12)
+                    .HasConstraintName("FK_Anbar_Onvan9");
+
+                entity.HasOne(d => d.AAcc13Navigation)
+                    .WithMany(p => p.AnbarAAcc13Navigations)
+                    .HasForeignKey(d => d.AAcc13)
+                    .HasConstraintName("FK_Anbar_Onvan10");
+
+                entity.HasOne(d => d.AAcc14Navigation)
+                    .WithMany(p => p.AnbarAAcc14Navigations)
+                    .HasForeignKey(d => d.AAcc14)
+                    .HasConstraintName("FK_Anbar_Onvan11");
+
+                entity.HasOne(d => d.AAcc16Navigation)
+                    .WithMany(p => p.AnbarAAcc16Navigations)
+                    .HasForeignKey(d => d.AAcc16)
+                    .HasConstraintName("FK__Anbar__A_Acc16__407061FE");
+
+                entity.HasOne(d => d.AAcc19Navigation)
+                    .WithMany(p => p.AnbarAAcc19Navigations)
+                    .HasForeignKey(d => d.AAcc19)
+                    .HasConstraintName("FK_Anbar_Onvan4");
+
+                entity.HasOne(d => d.AAcc2Navigation)
+                    .WithMany(p => p.AnbarAAcc2Navigations)
+                    .HasForeignKey(d => d.AAcc2)
+                    .HasConstraintName("FK_Anbar_Onvan12");
+
+                entity.HasOne(d => d.AAcc22Navigation)
+                    .WithMany(p => p.AnbarAAcc22Navigations)
+                    .HasForeignKey(d => d.AAcc22)
+                    .HasConstraintName("FK_Anbar_Onvan13");
+
+                entity.HasOne(d => d.AAcc23Navigation)
+                    .WithMany(p => p.AnbarAAcc23Navigations)
+                    .HasForeignKey(d => d.AAcc23)
+                    .HasConstraintName("FK_Anbar_Onvan14");
+
+                entity.HasOne(d => d.AAcc24Navigation)
+                    .WithMany(p => p.AnbarAAcc24Navigations)
+                    .HasForeignKey(d => d.AAcc24)
+                    .HasConstraintName("FK_Anbar_Onvan15");
+
+                entity.HasOne(d => d.AAcc3Navigation)
+                    .WithMany(p => p.AnbarAAcc3Navigations)
+                    .HasForeignKey(d => d.AAcc3)
+                    .HasConstraintName("FK_Anbar_Onvan1");
+
+                entity.HasOne(d => d.AAcc4Navigation)
+                    .WithMany(p => p.AnbarAAcc4Navigations)
+                    .HasForeignKey(d => d.AAcc4)
+                    .HasConstraintName("FK_Anbar_Onvan2");
+
+                entity.HasOne(d => d.AAcc5Navigation)
+                    .WithMany(p => p.AnbarAAcc5Navigations)
+                    .HasForeignKey(d => d.AAcc5)
+                    .HasConstraintName("FK_Anbar_Onvan3");
+
+                entity.HasOne(d => d.AAcc6Navigation)
+                    .WithMany(p => p.AnbarAAcc6Navigations)
+                    .HasForeignKey(d => d.AAcc6)
+                    .HasConstraintName("FK_Anbar_Onvan5");
+
+                entity.HasOne(d => d.AAcc7Navigation)
+                    .WithMany(p => p.AnbarAAcc7Navigations)
+                    .HasForeignKey(d => d.AAcc7)
+                    .HasConstraintName("FK__Anbar__A_Acc7__41648637");
+
+                entity.HasOne(d => d.AAcc9Navigation)
+                    .WithMany(p => p.AnbarAAcc9Navigations)
+                    .HasForeignKey(d => d.AAcc9)
+                    .HasConstraintName("FK_Anbar_Onvan6");
             });
 
             modelBuilder.Entity<Bar1>(entity =>
@@ -451,6 +548,15 @@ namespace CityInfoApi.Models_new
                     .HasColumnName("C_Shobeh")
                     .UseCollation("Arabic_CI_AI");
 
+                entity.HasOne(d => d.CHesabNavigation)
+                    .WithMany(p => p.CheckCHesabNavigations)
+                    .HasForeignKey(d => d.CHesab)
+                    .HasConstraintName("FK_Check_Onvan");
+
+                entity.HasOne(d => d.CHesab2Navigation)
+                    .WithMany(p => p.CheckCHesab2Navigations)
+                    .HasForeignKey(d => d.CHesab2)
+                    .HasConstraintName("FK_Check_Onvan1");
 
                 entity.HasOne(d => d.C)
                     .WithMany(p => p.Checks)
@@ -634,6 +740,26 @@ namespace CityInfoApi.Models_new
 
                 entity.Property(e => e.FUser).HasColumnName("F_User");
 
+                entity.HasOne(d => d.FAccEzafatNavigation)
+                    .WithMany(p => p.Factor1FAccEzafatNavigations)
+                    .HasForeignKey(d => d.FAccEzafat)
+                    .HasConstraintName("FK_Factor1_Onvan1");
+
+                entity.HasOne(d => d.FAccKosoratNavigation)
+                    .WithMany(p => p.Factor1FAccKosoratNavigations)
+                    .HasForeignKey(d => d.FAccKosorat)
+                    .HasConstraintName("FK_Factor1_Onvan");
+
+                entity.HasOne(d => d.FAnbarNavigation)
+                    .WithMany(p => p.Factor1FAnbarNavigations)
+                    .HasForeignKey(d => d.FAnbar)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_FACTOR_ANBAR");
+
+                entity.HasOne(d => d.FAnbar2Navigation)
+                    .WithMany(p => p.Factor1FAnbar2Navigations)
+                    .HasForeignKey(d => d.FAnbar2)
+                    .HasConstraintName("FK_Factor1_Anbar");
 
                 entity.HasOne(d => d.FMoshtariNavigation)
                     .WithMany(p => p.Factor1FMoshtariNavigations)
@@ -876,6 +1002,22 @@ namespace CityInfoApi.Models_new
                     .HasColumnName("T_Name")
                     .UseCollation("Arabic_CI_AI");
 
+                entity.HasMany(d => d.KCodes)
+                    .WithMany(p => p.TCodes)
+                    .UsingEntity<Dictionary<string, object>>(
+                        "Tashaboh",
+                        l => l.HasOne<Kala>().WithMany().HasForeignKey("KCode").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_Tashaboh_Kala"),
+                        r => r.HasOne<GorohT>().WithMany().HasForeignKey("TCode").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_Tashaboh_GorohT"),
+                        j =>
+                        {
+                            j.HasKey("TCode", "KCode");
+
+                            j.ToTable("Tashaboh");
+
+                            j.IndexerProperty<int>("TCode").HasColumnName("T_Code");
+
+                            j.IndexerProperty<int>("KCode").HasColumnName("K_Code");
+                        });
             });
 
             modelBuilder.Entity<InEditFactor>(entity =>
@@ -999,6 +1141,10 @@ namespace CityInfoApi.Models_new
 
                 entity.Property(e => e.KaSabet).HasColumnName("KA_Sabet");
 
+                entity.HasOne(d => d.KaAccNavigation)
+                    .WithMany(p => p.Kafactors)
+                    .HasForeignKey(d => d.KaAcc)
+                    .HasConstraintName("FK_KAFactor_Onvan");
             });
 
             modelBuilder.Entity<KafactorL>(entity =>
@@ -1413,6 +1559,11 @@ namespace CityInfoApi.Models_new
 
                 entity.Property(e => e.KhUser).HasColumnName("Kh_User");
 
+                entity.HasOne(d => d.KhAccNavigation)
+                    .WithMany(p => p.Khadamats)
+                    .HasForeignKey(d => d.KhAcc)
+                    .HasConstraintName("FK_Khadamat_Onvan");
+
                 entity.HasOne(d => d.KhMoshtariNavigation)
                     .WithMany(p => p.Khadamats)
                     .HasForeignKey(d => d.KhMoshtari)
@@ -1612,12 +1763,6 @@ namespace CityInfoApi.Models_new
                     .HasColumnName("M_Txt")
                     .UseCollation("Arabic_CI_AI");
 
-
-                entity.HasOne(d => d.MGorohNavigation)
-                    .WithMany(p => p.Moshtaris)
-                    .HasForeignKey(d => d.MGoroh)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Moshtari_GorohM");
             });
 
             modelBuilder.Entity<MoshtariTkmili>(entity =>
@@ -1794,8 +1939,75 @@ namespace CityInfoApi.Models_new
 
             modelBuilder.Entity<Onvan>(entity =>
             {
+                entity.HasKey(e => e.OAcc);
 
                 entity.ToTable("Onvan");
+
+                entity.Property(e => e.OAcc)
+                    .HasMaxLength(8)
+                    .IsUnicode(false)
+                    .HasColumnName("O_Acc")
+                    .UseCollation("Arabic_CI_AI");
+
+                entity.Property(e => e.OArzBed).HasColumnName("O_ArzBed");
+
+                entity.Property(e => e.OArzBes).HasColumnName("O_ArzBes");
+
+                entity.Property(e => e.OBed).HasColumnName("O_Bed");
+
+                entity.Property(e => e.OBedBes)
+                    .HasColumnName("O_BedBes")
+                    .HasDefaultValueSql("(0)");
+
+                entity.Property(e => e.OBes).HasColumnName("O_Bes");
+
+                entity.Property(e => e.OFlag)
+                    .HasColumnName("O_Flag")
+                    .HasDefaultValueSql("(1)");
+
+                entity.Property(e => e.OGoroh).HasColumnName("O_Goroh");
+
+                entity.Property(e => e.OInUsed)
+                    .HasColumnName("O_InUsed")
+                    .HasDefaultValueSql("(0)");
+
+                entity.Property(e => e.OKind).HasColumnName("O_Kind");
+
+                entity.Property(e => e.OKol)
+                    .HasMaxLength(2)
+                    .IsUnicode(false)
+                    .HasColumnName("O_Kol")
+                    .UseCollation("Arabic_CI_AI");
+
+                entity.Property(e => e.OMoein)
+                    .HasMaxLength(2)
+                    .IsUnicode(false)
+                    .HasColumnName("O_Moein")
+                    .UseCollation("Arabic_CI_AI");
+
+                entity.Property(e => e.OName)
+                    .HasMaxLength(40)
+                    .HasColumnName("O_Name")
+                    .UseCollation("Arabic_CI_AI");
+
+                entity.Property(e => e.ONoDarayi).HasColumnName("O_NoDarayi");
+
+                entity.Property(e => e.OSanad).HasColumnName("O_Sanad");
+
+                entity.Property(e => e.OSub).HasColumnName("O_Sub");
+
+                entity.Property(e => e.OTemp).HasColumnName("O_Temp");
+
+                entity.Property(e => e.OTfzili)
+                    .HasMaxLength(4)
+                    .IsUnicode(false)
+                    .HasColumnName("O_Tfzili")
+                    .UseCollation("Arabic_CI_AI");
+
+                entity.HasOne(d => d.OGorohNavigation)
+                    .WithMany(p => p.Onvans)
+                    .HasForeignKey(d => d.OGoroh)
+                    .HasConstraintName("FK_Onvan_Goroh");
             });
 
             modelBuilder.Entity<Payment1>(entity =>
@@ -1859,6 +2071,15 @@ namespace CityInfoApi.Models_new
 
                 entity.Property(e => e.P1User).HasColumnName("P1_User");
 
+                entity.HasOne(d => d.P1Acc1Navigation)
+                    .WithMany(p => p.Payment1P1Acc1Navigations)
+                    .HasForeignKey(d => d.P1Acc1)
+                    .HasConstraintName("FK_Payment1_Onvan");
+
+                entity.HasOne(d => d.P1Acc2Navigation)
+                    .WithMany(p => p.Payment1P1Acc2Navigations)
+                    .HasForeignKey(d => d.P1Acc2)
+                    .HasConstraintName("FK_Payment1_Onvan1");
 
                 entity.HasOne(d => d.P1MoshtariNavigation)
                     .WithMany(p => p.Payment1s)
@@ -1915,6 +2136,16 @@ namespace CityInfoApi.Models_new
                     .HasMaxLength(80)
                     .HasColumnName("P2_Shrh")
                     .UseCollation("Arabic_CI_AI");
+
+                entity.HasOne(d => d.P2AccNavigation)
+                    .WithMany(p => p.Payment2P2AccNavigations)
+                    .HasForeignKey(d => d.P2Acc)
+                    .HasConstraintName("FK_Payment2_Onvan");
+
+                entity.HasOne(d => d.P2Acc2Navigation)
+                    .WithMany(p => p.Payment2P2Acc2Navigations)
+                    .HasForeignKey(d => d.P2Acc2)
+                    .HasConstraintName("FK_Payment2_Onvan1");
 
                 entity.HasOne(d => d.P2CheckNavigation)
                     .WithMany(p => p.Payment2s)
@@ -2568,6 +2799,11 @@ namespace CityInfoApi.Models_new
                     .HasMaxLength(250)
                     .UseCollation("Arabic_CI_AI");
 
+                entity.HasOne(d => d.AccNavigation)
+                    .WithMany(p => p.SanadItms)
+                    .HasForeignKey(d => d.Acc)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_SanadITM_Onvan");
 
                 entity.HasOne(d => d.FFactorNavigation)
                     .WithMany(p => p.SanadItms)

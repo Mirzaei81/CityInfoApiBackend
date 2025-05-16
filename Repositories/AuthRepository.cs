@@ -1,5 +1,6 @@
 ﻿using CityInfoApi.AlmasMain;
 using CityInfoApi.Dtos;
+using CityInfoApi.Models;
 using CityInfoApi.Models_new;
 using CityInfoApi.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;

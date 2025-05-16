@@ -3,7 +3,7 @@ namespace CityInfoApi.Models_new
 {
     public partial class SysCompany
     {
-        public long CId { get; set; }
+        public int CId { get; set; }
         public string? CName { get; set; }
         public string? CEconomy { get; set; }
         public byte[]? CArm { get; set; }

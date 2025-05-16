@@ -1,4 +1,4 @@
-﻿using CityInfoApi.Models;
+﻿using CityInfoApi.Models_new;
 
 namespace CityInfoApi.Dtos
 {

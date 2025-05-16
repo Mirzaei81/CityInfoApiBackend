@@ -23,7 +23,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddDbContext<AlmasMainContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AlmasMain")!)
     );
-builder.Services.AddDbContext<AlmasACC>();
+builder.Services.AddDbContext<AlmasACC14031Context>();
 
 var app = builder.Build();
 

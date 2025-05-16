@@ -19,6 +19,9 @@ public partial class FactorSubmit
     [JsonPropertyName("Sharh")]
     public string Sharh { get; set; }
 
+    [JsonPropertyName("F_Porsant")]
+    public long FPorsant { get; set; }
+
     [JsonPropertyName("factorDetails")]
     public IEnumerable<FactorDetail> FactorDetails { get; set; }
 }

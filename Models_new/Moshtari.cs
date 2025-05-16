@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CityInfoApi.Models_new
 {
@@ -50,8 +51,7 @@ namespace CityInfoApi.Models_new
         public bool MModir { get; set; }
         public string? MShobe { get; set; }
 
-        public virtual Onvan MAccNavigation { get; set; } = null!;
-        public virtual GorohM MGorohNavigation { get; set; } = null!;
+        [NotMapped]
         public virtual MoshtariTkmili MoshtariTkmili { get; set; } = null!;
         public virtual ICollection<Factor1> Factor1FMoshtariNavigations { get; set; }
         public virtual ICollection<Factor1> Factor1FPorsantNavigations { get; set; }

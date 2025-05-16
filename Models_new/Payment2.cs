@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CityInfoApi.Models_new
 {
@@ -20,8 +21,11 @@ namespace CityInfoApi.Models_new
         public double? P2ArzKol { get; set; }
 
         public virtual Payment1 P2 { get; set; } = null!;
+        [NotMapped]
         public virtual Onvan? P2Acc2Navigation { get; set; }
+        [NotMapped]
         public virtual Onvan? P2AccNavigation { get; set; }
+        [NotMapped]
         public virtual Check? P2CheckNavigation { get; set; }
     }
 }

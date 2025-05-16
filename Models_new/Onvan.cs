@@ -9,6 +9,7 @@ namespace CityInfoApi.Models_new
     {
         public Onvan()
         {
+            AnbarAAcc10Navigations = new HashSet<Anbar>();
             AnbarAAcc11Navigations = new HashSet<Anbar>();
             AnbarAAcc12Navigations = new HashSet<Anbar>();
             AnbarAAcc13Navigations = new HashSet<Anbar>();
@@ -40,11 +41,11 @@ namespace CityInfoApi.Models_new
             SanadItms = new HashSet<SanadItm>();
         }
 
-        [Key]
         public byte? OGoroh { get; set; }
         public string? OKol { get; set; }
         public string? OMoein { get; set; }
         public string? OTfzili { get; set; }
+        [Key]
         public string OAcc { get; set; } = null!;
         public string? OName { get; set; }
         public bool OSub { get; set; }
@@ -60,7 +61,10 @@ namespace CityInfoApi.Models_new
         public short? ONoDarayi { get; set; }
         public byte? OBedBes { get; set; }
 
+        [NotMapped]
         public virtual Goroh? OGorohNavigation { get; set; }
+        [NotMapped]
+        public virtual ICollection<Anbar> AnbarAAcc10Navigations { get; set; }
         [NotMapped]
         public virtual ICollection<Anbar> AnbarAAcc11Navigations { get; set; }
         [NotMapped]

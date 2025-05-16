@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CityInfoApi.Models_new
 {
@@ -28,7 +29,9 @@ namespace CityInfoApi.Models_new
         public string? P1Acc1 { get; set; }
         public string? P1Acc2 { get; set; }
 
+        [NotMapped]
         public virtual Onvan? P1Acc1Navigation { get; set; }
+        [NotMapped]
         public virtual Onvan? P1Acc2Navigation { get; set; }
         public virtual Moshtari? P1MoshtariNavigation { get; set; }
         public virtual Sanad? P1SanadNavigation { get; set; }

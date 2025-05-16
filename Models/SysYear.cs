@@ -5,9 +5,9 @@ namespace CityInfoApi.Models_new
 {
     public partial class SysYear
     {
-        public long YDaftar { get; set; }
-        public long YYear { get; set; }
-        public long YCompany { get; set; }
+        public int YDaftar { get; set; }
+        public int YYear { get; set; }
+        public int YCompany { get; set; }
         [JsonIgnore]
         public string? YDateF { get; set; }
 
@@ -17,7 +17,7 @@ namespace CityInfoApi.Models_new
         [JsonIgnore]
         public bool? YFlag { get; set; }
         [JsonIgnore]
-        public long YFirstSanad { get; set; }
+        public int YFirstSanad { get; set; }
         [JsonIgnore]
         public long YLastSanad { get; set; }
         [JsonIgnore]

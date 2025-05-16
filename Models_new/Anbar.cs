@@ -8,6 +8,8 @@ namespace CityInfoApi.Models_new
     {
         public Anbar()
         {
+            Factor1FAnbar2Navigations = new HashSet<Factor1>();
+            Factor1FAnbarNavigations = new HashSet<Factor1>();
             KalaMs = new HashSet<KalaM>();
         }
 
@@ -35,6 +37,10 @@ namespace CityInfoApi.Models_new
         public string? AAcc16 { get; set; }
 
         [NotMapped]
+        public virtual Onvan MAccNavigation { get; set; } = null!;
+        [NotMapped]
+        public virtual Onvan? AAcc10Navigation { get; set; }
+        [NotMapped]
         public virtual Onvan? AAcc11Navigation { get; set; }
         [NotMapped]
         public virtual Onvan? AAcc12Navigation { get; set; }
@@ -46,6 +52,8 @@ namespace CityInfoApi.Models_new
         public virtual Onvan? AAcc16Navigation { get; set; }
         [NotMapped]
         public virtual Onvan? AAcc19Navigation { get; set; }
+        [NotMapped]
+        public virtual Onvan? AAcc1Navigation { get; set; }
         [NotMapped]
         public virtual Onvan? AAcc22Navigation { get; set; }
         [NotMapped]
@@ -66,6 +74,10 @@ namespace CityInfoApi.Models_new
         public virtual Onvan? AAcc7Navigation { get; set; }
         [NotMapped]
         public virtual Onvan? AAcc9Navigation { get; set; }
+        [NotMapped]
+        public virtual ICollection<Factor1> Factor1FAnbar2Navigations { get; set; }
+        [NotMapped]
+        public virtual ICollection<Factor1> Factor1FAnbarNavigations { get; set; }
         [NotMapped]
         public virtual ICollection<KalaM> KalaMs { get; set; }
     }

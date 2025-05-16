@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CityInfoApi.Models_new
 {
@@ -53,7 +54,11 @@ namespace CityInfoApi.Models_new
         public string? FTaxId { get; set; }
 
         public virtual Payment1? F { get; set; }
+
+        [NotMapped]
         public virtual Onvan? FAccEzafatNavigation { get; set; }
+
+        [NotMapped]
         public virtual Onvan? FAccKosoratNavigation { get; set; }
         public virtual Anbar? FAnbar2Navigation { get; set; }
         public virtual Anbar FAnbarNavigation { get; set; } = null!;
@@ -62,7 +67,9 @@ namespace CityInfoApi.Models_new
         public virtual Sanad? FSanadNavigation { get; set; }
         public virtual InEditFactor InEditFactor { get; set; } = null!;
         public virtual ICollection<Factor2> Factor2s { get; set; }
+        [NotMapped]
         public virtual ICollection<KafactorL> KafactorLs { get; set; }
+        [NotMapped]
         public virtual ICollection<SanadItm> SanadItms { get; set; }
     }
 }
